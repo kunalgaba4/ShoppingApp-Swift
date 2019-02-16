@@ -7,3 +7,17 @@
 //
 
 import Foundation
+
+class OrderDetails{
+    var orderId: Int
+    var productId: Int
+    var productName: String
+    var quantity: Int
+    var unitCost: Float
+    var subTotal: Float
+    
+    calcPrice(){
+    
+    
+    }
+}

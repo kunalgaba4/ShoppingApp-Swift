@@ -12,6 +12,9 @@
 		C68F7AFD221885CE0052D5CF /* ShoppingCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68F7AFC221885CE0052D5CF /* ShoppingCart.swift */; };
 		C68F7AFF221886A70052D5CF /* Orders.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68F7AFE221886A70052D5CF /* Orders.swift */; };
 		C68F7B04221887E20052D5CF /* OrderDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68F7B03221887E20052D5CF /* OrderDetails.swift */; };
+		C68F7B0722188E580052D5CF /* ShippingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68F7B0622188E580052D5CF /* ShippingInfo.swift */; };
+		C68F7B0A221891A10052D5CF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68F7B09221891A10052D5CF /* User.swift */; };
+		C68F7B0C221893200052D5CF /* Administration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68F7B0B221893200052D5CF /* Administration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +36,9 @@
 		C68F7AFC221885CE0052D5CF /* ShoppingCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCart.swift; sourceTree = "<group>"; };
 		C68F7AFE221886A70052D5CF /* Orders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orders.swift; sourceTree = "<group>"; };
 		C68F7B03221887E20052D5CF /* OrderDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetails.swift; sourceTree = "<group>"; };
+		C68F7B0622188E580052D5CF /* ShippingInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShippingInfo.swift; sourceTree = "<group>"; };
+		C68F7B09221891A10052D5CF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C68F7B0B221893200052D5CF /* Administration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Administration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,10 +71,11 @@
 		9B1D8BEE2215069800D81C1E /* Group7_W2019_MAD3004_FP */ = {
 			isa = PBXGroup;
 			children = (
+				C68F7B0D221893AA0052D5CF /* Shopping */,
+				C68F7B082218914D0052D5CF /* LoginReg */,
+				C68F7B052218892A0052D5CF /* Shipping */,
 				C68F7B002218877C0052D5CF /* Orders */,
 				9B1D8BEF2215069800D81C1E /* main.swift */,
-				C68F7AFA2218835E0052D5CF /* Customers.swift */,
-				C68F7AFC221885CE0052D5CF /* ShoppingCart.swift */,
 			);
 			path = Group7_W2019_MAD3004_FP;
 			sourceTree = "<group>";
@@ -80,6 +87,32 @@
 				C68F7B03221887E20052D5CF /* OrderDetails.swift */,
 			);
 			path = Orders;
+			sourceTree = "<group>";
+		};
+		C68F7B052218892A0052D5CF /* Shipping */ = {
+			isa = PBXGroup;
+			children = (
+				C68F7B0622188E580052D5CF /* ShippingInfo.swift */,
+			);
+			path = Shipping;
+			sourceTree = "<group>";
+		};
+		C68F7B082218914D0052D5CF /* LoginReg */ = {
+			isa = PBXGroup;
+			children = (
+				C68F7AFA2218835E0052D5CF /* Customers.swift */,
+				C68F7B09221891A10052D5CF /* User.swift */,
+				C68F7B0B221893200052D5CF /* Administration.swift */,
+			);
+			path = LoginReg;
+			sourceTree = "<group>";
+		};
+		C68F7B0D221893AA0052D5CF /* Shopping */ = {
+			isa = PBXGroup;
+			children = (
+				C68F7AFC221885CE0052D5CF /* ShoppingCart.swift */,
+			);
+			path = Shopping;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +177,9 @@
 				C68F7AFD221885CE0052D5CF /* ShoppingCart.swift in Sources */,
 				C68F7AFF221886A70052D5CF /* Orders.swift in Sources */,
 				C68F7AFB2218835E0052D5CF /* Customers.swift in Sources */,
+				C68F7B0C221893200052D5CF /* Administration.swift in Sources */,
+				C68F7B0722188E580052D5CF /* ShippingInfo.swift in Sources */,
+				C68F7B0A221891A10052D5CF /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
