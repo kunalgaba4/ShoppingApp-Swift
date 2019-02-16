@@ -9,24 +9,24 @@
 import Foundation
 
 class ShoppingCart{
-    cartId: Int
-    productId: Int
-    quantity: Int
-    dateAdded: Int
+    var cartId: Int
+    var productId: Int
+    var quantity: Int
+    var dateAdded: Int
     
-    addCartItem(){
-    
-    }
-    
-    updateQuantity(){
+    func addCartItem(){
     
     }
     
-    viewCartDetails(){
+    func updateQuantity(){
     
     }
     
-    checkOut(){
+    func viewCartDetails(){
+    
+    }
+    
+    func checkOut(){
     
     }
 }

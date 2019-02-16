@@ -10,15 +10,15 @@ import Foundation
 
 
 class Orders{
-    orderid: Int
-    dateCreated: String
-    dateShipped: String
-    customerName: String
-    customerId: String
-    status: String
-    shippingId: String
+    var orderid: Int
+    var dateCreated: String
+    var dateShipped: String
+    var customerName: String
+    var customerId: String
+    var status: String
+    var shippingId: String
     
-    placeOrder(){
+    func placeOrder(){
     
     }
 }
