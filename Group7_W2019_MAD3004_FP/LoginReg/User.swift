@@ -10,9 +10,15 @@ import Foundation
 
 class User{
     
-    var userID: Int
+    var userId: Int
     var password: String
     var loginStatus: String
+    
+    init(userId: Int,password: String,loginStatus: String){
+        self.userId = userId
+        self.password = password
+        self.loginStatus = loginStatus
+    }
     
     func verifyLogin()-> Bool{
         

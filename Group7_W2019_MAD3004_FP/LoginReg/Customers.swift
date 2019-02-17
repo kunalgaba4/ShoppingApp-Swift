@@ -7,3 +7,27 @@
 //
 
 import Foundation
+
+class Customers{
+    
+    var customerName: String
+    var address: String
+    var email: String
+    var creditCardInfo: String
+    var shippingInfo: String
+    
+    func register(){
+    
+    
+    }
+    
+    func login(){
+        
+    }
+    
+    func updateProfile(){
+        
+        
+    }
+    
+}
