@@ -8,5 +8,7 @@
 
 import Foundation
 
-print("Hello, World!")
 
+var c1: Customers
+c1 = Customers(customerId: 1,customerName: "Sumit Kumar", address: "7361 SHALLFORD RD", email: "imsumitk1@gmail.com",password: "Test@123", creditCardInfo: "Visa Card", shippingInfo: "Toronto")!
+c1.printData()
