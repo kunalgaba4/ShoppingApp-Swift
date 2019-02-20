@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ShoppingCart{
+/*class ShoppingCart{
     var cartId: Int
     var productId: Int
     var quantity: Int
@@ -30,3 +30,4 @@ class ShoppingCart{
     
     }
 }
+ */

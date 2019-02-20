@@ -9,7 +9,7 @@
 import Foundation
 
 
-class Orders{
+/*class Orders{
     var orderid: Int
     var dateCreated: String
     var dateShipped: String
@@ -18,7 +18,16 @@ class Orders{
     var status: String
     var shippingId: String
     
+}
+
+init(){
+    
+    
+    self.
+}
+    
     func placeOrder(){
     
     }
 }
+*/

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class User{
+/*class User{
     
     var userId: Int
     var password: String
@@ -23,4 +23,4 @@ class User{
     func verifyLogin()-> Bool{
         
     }
-}
+}*/

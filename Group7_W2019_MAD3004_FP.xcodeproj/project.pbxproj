@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9B1D8BF02215069800D81C1E /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1D8BEF2215069800D81C1E /* main.swift */; };
+		C64ABB66221B5CCF00882B09 /* Validations.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64ABB65221B5CCF00882B09 /* Validations.swift */; };
 		C68F7AFB2218835E0052D5CF /* Customers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68F7AFA2218835E0052D5CF /* Customers.swift */; };
 		C68F7AFD221885CE0052D5CF /* ShoppingCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68F7AFC221885CE0052D5CF /* ShoppingCart.swift */; };
 		C68F7AFF221886A70052D5CF /* Orders.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68F7AFE221886A70052D5CF /* Orders.swift */; };
@@ -32,6 +33,7 @@
 /* Begin PBXFileReference section */
 		9B1D8BEC2215069800D81C1E /* Group7_W2019_MAD3004_FP */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Group7_W2019_MAD3004_FP; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B1D8BEF2215069800D81C1E /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		C64ABB65221B5CCF00882B09 /* Validations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validations.swift; sourceTree = "<group>"; };
 		C68F7AFA2218835E0052D5CF /* Customers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customers.swift; sourceTree = "<group>"; };
 		C68F7AFC221885CE0052D5CF /* ShoppingCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCart.swift; sourceTree = "<group>"; };
 		C68F7AFE221886A70052D5CF /* Orders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orders.swift; sourceTree = "<group>"; };
@@ -80,6 +82,14 @@
 			path = Group7_W2019_MAD3004_FP;
 			sourceTree = "<group>";
 		};
+		C64ABB64221B5C9200882B09 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C64ABB65221B5CCF00882B09 /* Validations.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		C68F7B002218877C0052D5CF /* Orders */ = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +110,7 @@
 		C68F7B082218914D0052D5CF /* LoginReg */ = {
 			isa = PBXGroup;
 			children = (
+				C64ABB64221B5C9200882B09 /* Extensions */,
 				C68F7AFA2218835E0052D5CF /* Customers.swift */,
 				C68F7B09221891A10052D5CF /* User.swift */,
 				C68F7B0B221893200052D5CF /* Administration.swift */,
@@ -176,6 +187,7 @@
 				9B1D8BF02215069800D81C1E /* main.swift in Sources */,
 				C68F7AFD221885CE0052D5CF /* ShoppingCart.swift in Sources */,
 				C68F7AFF221886A70052D5CF /* Orders.swift in Sources */,
+				C64ABB66221B5CCF00882B09 /* Validations.swift in Sources */,
 				C68F7AFB2218835E0052D5CF /* Customers.swift in Sources */,
 				C68F7B0C221893200052D5CF /* Administration.swift in Sources */,
 				C68F7B0722188E580052D5CF /* ShippingInfo.swift in Sources */,

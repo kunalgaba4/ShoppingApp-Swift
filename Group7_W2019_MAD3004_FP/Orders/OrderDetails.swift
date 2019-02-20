@@ -8,7 +8,7 @@
 
 import Foundation
 
-class OrderDetails{
+/*class OrderDetails{
     var orderId: Int
     var productId: Int
     var productName: String
@@ -20,4 +20,4 @@ class OrderDetails{
     
     
     }
-}
+}*/

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Admin{
+/*class Admin{
     
     var adminName: Int
     var email: String
@@ -16,4 +16,4 @@ class Admin{
     var updateCatalog()-> Bool{
     
     }
-}
+}*/

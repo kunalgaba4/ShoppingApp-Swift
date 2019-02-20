@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Shipping{
+/*class Shipping{
     var shippingId: Int
     var shippingType: String
     var shippingCost: Int
@@ -18,5 +18,5 @@ class Shipping{
     
     }
     
-}
+}*/
 
