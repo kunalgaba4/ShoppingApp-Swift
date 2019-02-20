@@ -8,7 +8,7 @@
 
 import Foundation
 
-/*class User{
+class User{
     
     var userId: Int
     var password: String
@@ -20,7 +20,7 @@ import Foundation
         self.loginStatus = loginStatus
     }
     
-    func verifyLogin()-> Bool{
-        
-    }
-}*/
+    func verifyLogin(){
+
+}
+}

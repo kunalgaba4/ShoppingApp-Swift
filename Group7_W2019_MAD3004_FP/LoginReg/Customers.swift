@@ -8,41 +8,33 @@
 
 import Foundation
  
-class Customers{
-    var customerId: Int
+class Customers: User,IDisplay{
     var customerName: String
     var address: String
     var email: String
-    var password: String
     var creditCardInfo: String
     var shippingInfo: String
     
    required init(){
-        self.customerId = Int()
+    
         self.customerName = String()
-        self.password = String()
         self.address = String()
         self.email = String()
         self.creditCardInfo = String()
         self.shippingInfo = String()
     }
-    
-    init?(customerId: Int,customerName: String,address: String,email: String,password: String,creditCardInfo: String,shippingInfo: String){
+    super.init(){
         
-        self.customerId = customerId
+    }
+    init?(customerName: String,address: String,email: String,creditCardInfo: String,shippingInfo: String){
+        
+    
         self.customerName = customerName
         self.address = address
         self.email = email
-        self.password = password
         self.creditCardInfo = creditCardInfo
         self.shippingInfo = shippingInfo
     
-        if customerId < 0
-        {
-            print("Customer ID must be >= 0")
-            return nil
-        }
-        
         if customerName.count < 10
         {
             print("Customer Name must be >= 10 length")
@@ -84,7 +76,7 @@ class Customers{
 
 func printData()
 {
-    print("Customer ID    : \(String(describing: self.customerName))")
+    print("Customer Name    : \(String(describing: self.customerName))")
     print("Customer Name  : \(String(describing: self.address))")
     print("Customer Email : \(String(describing: self.email))")
     print("Credit Card     : \(String(describing: self.creditCardInfo))")
