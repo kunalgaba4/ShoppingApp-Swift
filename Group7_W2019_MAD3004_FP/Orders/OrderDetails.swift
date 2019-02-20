@@ -16,8 +16,21 @@ import Foundation
     var unitCost: Float
     var subTotal: Float
     
-    calcPrice(){
+    init(orderId: Int, productId: Int,productName: String, quantity: Int, unitCost: Float, subTotal: Float)
+    {
+        self.orderId = orderId
+        self.productId = productId
+        self.productName = productName
+        self.quantity = quantity
+        self.unitCost = unitCost
+        self.subTotal = subTotal
+        
+    }
     
+    
+    func calcPrice(){
+    
+        
     
     }
 }*/

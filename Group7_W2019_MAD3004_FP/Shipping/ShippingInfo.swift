@@ -14,6 +14,14 @@ import Foundation
     var shippingCost: Int
     var shippingRegionId: Int
     
+    init(shippingId: Int,shippingType: String,shippingCost: Int,shippingRegionId: Int)
+    {
+        self.shippingId = shippingId
+        self.shippingType = shippingType
+        self.shippingCost = shippingCost
+        self.shippingRegionId = shippingRegionId
+    }
+    
     func updateShippingInfo(){
     
     }

@@ -8,12 +8,24 @@
 
 import Foundation
 
+<<<<<<< HEAD
 /*class Admin{
+=======
+class Admin: User{
+>>>>>>> 04199c421ba5ea69cf9d8ac3925ec0d70817d366
     
-    var adminName: Int
-    var email: String
+    var adminName: String!
+    var email: String!
     
-    var updateCatalog()-> Bool{
+    init(adminName: String, email: String, userId: Int, password: String,loginStatus: LoginStatus){
+        self.adminName = adminName
+        self.email = email
+        super.init(userId: userId, password: password, loginStatus: loginStatus)
+        
+    }
     
+    func updateCatalog() -> Bool
+    {
+      return true
     }
 }*/

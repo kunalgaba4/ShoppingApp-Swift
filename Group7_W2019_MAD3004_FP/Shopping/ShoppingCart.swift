@@ -14,6 +14,24 @@ import Foundation
     var quantity: Int
     var dateAdded: Int
     
+    init(cartId : Int, productId : Int, quantity : Int , dateAdded : Int ) {
+        self.cartId = cartId
+        self.productId = productId
+        self.quantity = quantity
+        self.dateAdded = dateAdded
+    }
+    
+    func updateQuantity(newQuantity: Int) throws {
+        let newCount = self.quantity + newQuantity
+        
+        guard newCount <= 5 else{
+            throw OrderError.invalidQuantity(newQty: 3)
+        }
+    }
+    
+    
+    
+    
     func addCartItem(){
     
     }
