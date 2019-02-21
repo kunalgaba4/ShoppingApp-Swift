@@ -8,7 +8,8 @@
 
 import Foundation
  
-class Customers{
+class Customers
+{
     var customerId: Int
     var customerName: String
     var address: String
@@ -16,6 +17,8 @@ class Customers{
     var password: String
     var creditCardInfo: String
     var shippingInfo: String
+    
+    
     
    required init(){
         self.customerId = Int()
