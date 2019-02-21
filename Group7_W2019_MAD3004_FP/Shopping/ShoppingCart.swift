@@ -14,6 +14,13 @@ class ShoppingCart{
     var quantity: Int
     var dateAdded: Int
     
+    init(cartId : Int, productId : Int, quantity : Int , dateAdded : Int ) {
+        self.cartId = cartId
+        self.productId = productId
+        self.quantity = quantity
+        self.dateAdded = dateAdded
+    }
+    
     func addCartItem(){
     
     }

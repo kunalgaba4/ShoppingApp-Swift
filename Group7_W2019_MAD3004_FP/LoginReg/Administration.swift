@@ -10,10 +10,10 @@ import Foundation
 
 class Admin{
     
-    var adminName: Int
-    var email: String
+    var adminName: String!
+    var email: String!
     
-    init(adminName: Int, email: String)
+    init(adminName: String, email: String)
     {
         self.adminName = adminName
         self.email = email
@@ -21,6 +21,6 @@ class Admin{
     
     func updateCatalog() -> Bool
     {
-    
+      return true
     }
 }

@@ -11,7 +11,7 @@ import Foundation
 class OrderDetails{
     var orderId: Int
     var productId: Int
-    var productName: [String]
+    var productName: String
     var quantity: Int
     var unitCost: Float
     var subTotal: Float
@@ -20,7 +20,7 @@ class OrderDetails{
     {
         self.orderId = orderId
         self.productId = productId
-        self.productName = [productName]
+        self.productName = productName
         self.quantity = quantity
         self.unitCost = unitCost
         self.subTotal = subTotal
@@ -30,7 +30,7 @@ class OrderDetails{
     
     func calcPrice(){
     
-        var total =
+        
     
     }
 }
