@@ -13,7 +13,14 @@ class Admin{
     var adminName: Int
     var email: String
     
-    var updateCatalog()-> Bool{
+    init(adminName: Int, email: String)
+    {
+        self.adminName = adminName
+        self.email = email
+    }
+    
+    func updateCatalog() -> Bool
+    {
     
     }
 }
