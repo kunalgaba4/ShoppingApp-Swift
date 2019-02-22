@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0D196D86221F3BED0086BF81 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D196D85221F3BED0086BF81 /* Extensions.swift */; };
+		0D62AECE221F7A120005BAFD /* IDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D62AECD221F7A120005BAFD /* IDisplay.swift */; };
+		0D6E97BA222051AA005AAFDE /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6E97B9222051AA005AAFDE /* Enum.swift */; };
 		9B1D8BF02215069800D81C1E /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1D8BEF2215069800D81C1E /* main.swift */; };
 		C68F7AFB2218835E0052D5CF /* Customers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68F7AFA2218835E0052D5CF /* Customers.swift */; };
 		C68F7AFD221885CE0052D5CF /* ShoppingCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68F7AFC221885CE0052D5CF /* ShoppingCart.swift */; };
@@ -32,6 +34,8 @@
 
 /* Begin PBXFileReference section */
 		0D196D85221F3BED0086BF81 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		0D62AECD221F7A120005BAFD /* IDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDisplay.swift; sourceTree = "<group>"; };
+		0D6E97B9222051AA005AAFDE /* Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
 		9B1D8BEC2215069800D81C1E /* Group7_W2019_MAD3004_FP */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Group7_W2019_MAD3004_FP; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B1D8BEF2215069800D81C1E /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		C68F7AFA2218835E0052D5CF /* Customers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customers.swift; sourceTree = "<group>"; };
@@ -79,6 +83,8 @@
 				C68F7B002218877C0052D5CF /* Orders */,
 				9B1D8BEF2215069800D81C1E /* main.swift */,
 				0D196D85221F3BED0086BF81 /* Extensions.swift */,
+				0D62AECD221F7A120005BAFD /* IDisplay.swift */,
+				0D6E97B9222051AA005AAFDE /* Enum.swift */,
 			);
 			path = Group7_W2019_MAD3004_FP;
 			sourceTree = "<group>";
@@ -179,10 +185,12 @@
 				0D196D86221F3BED0086BF81 /* Extensions.swift in Sources */,
 				9B1D8BF02215069800D81C1E /* main.swift in Sources */,
 				C68F7AFD221885CE0052D5CF /* ShoppingCart.swift in Sources */,
+				0D6E97BA222051AA005AAFDE /* Enum.swift in Sources */,
 				C68F7AFF221886A70052D5CF /* Orders.swift in Sources */,
 				C68F7AFB2218835E0052D5CF /* Customers.swift in Sources */,
 				C68F7B0C221893200052D5CF /* Administration.swift in Sources */,
 				C68F7B0722188E580052D5CF /* ShippingInfo.swift in Sources */,
+				0D62AECE221F7A120005BAFD /* IDisplay.swift in Sources */,
 				C68F7B0A221891A10052D5CF /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

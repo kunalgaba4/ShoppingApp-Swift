@@ -21,6 +21,17 @@ class ShoppingCart{
         self.dateAdded = dateAdded
     }
     
+    func updateQuantity(newQuantity: Int) throws {
+        let newCount = self.quantity + newQuantity
+        
+        guard newCount <= 5 else{
+            throw OrderError.invalidQuantity(newQty: 3)
+        }
+    }
+    
+    
+    
+    
     func addCartItem(){
     
     }
