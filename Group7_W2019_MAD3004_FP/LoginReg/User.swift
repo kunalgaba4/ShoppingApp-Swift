@@ -8,20 +8,34 @@
 
 import Foundation
 
+
+
 class User{
     
     var userId: Int!
     var password: String!
-    var loginStatus: Bool!
+    var loginStatus = LoginStatus.NotVerified
     
     init(userId: Int, password: String, loginStatus: Bool){
         self.userId = userId
         self.password = password
-        self.loginStatus = loginStatus
+        
     }
+    
+    
     
     func verifyLogin()-> Bool
     {
-     return true
+        if(self.loginStatus == LoginStatus.NotVerified)
+        {
+            return false
+        }
+        else{
+        
+            return true
+        }
     }
+    
+    func verify () {
+        loginStatus = LoginStatus.Verified }
 }
