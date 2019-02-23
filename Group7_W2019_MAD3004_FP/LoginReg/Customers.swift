@@ -8,37 +8,23 @@
 
 import Foundation
  
-class Customers
+class Customers:User
 {
-    var customerId: Int
     var customerName: String
     var address: String
     var email: String
-    var password: String
     var creditCardInfo: String
     var shippingInfo: String
     
     
-    
-   required init(){
-        self.customerId = Int()
-        self.customerName = String()
-        self.password = String()
-        self.address = String()
-        self.email = String()
-        self.creditCardInfo = String()
-        self.shippingInfo = String()
-    }
-    
-    init?(customerId: Int,customerName: String,address: String,email: String,password: String,creditCardInfo: String,shippingInfo: String){
-        
-        self.customerId = customerId
+    init?(customerId: Int,customerName: String,address: String,email: String,password: String,creditCardInfo: String,shippingInfo: String, loginStatus: LoginStatus ){
         self.customerName = customerName
         self.address = address
         self.email = email
-        self.password = password
         self.creditCardInfo = creditCardInfo
         self.shippingInfo = shippingInfo
+        super.init(userId: customerId, password: password, loginStatus:loginStatus)
+
     
         if customerId < 0
         {
@@ -85,7 +71,7 @@ class Customers
     
     
 
-func printData()
+override func printData()
 {
     print("Customer ID    : \(String(describing: self.customerName))")
     print("Customer Name  : \(String(describing: self.address))")

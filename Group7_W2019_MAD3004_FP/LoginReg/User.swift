@@ -10,32 +10,31 @@ import Foundation
 
 
 
-class User{
-    
+class User: IDisplay{
+   
+
     var userId: Int!
     var password: String!
-    var loginStatus = LoginStatus.NotVerified
+    var loginStatus : LoginStatus
     
-    init(userId: Int, password: String, loginStatus: Bool){
+    init(userId: Int, password: String, loginStatus: LoginStatus){
         self.userId = userId
         self.password = password
-        
+        self.loginStatus = LoginStatus.NotVerified
     }
-    
     
     
     func verifyLogin()-> Bool
     {
-        if(self.loginStatus == LoginStatus.NotVerified)
-        {
+        if(self.loginStatus == LoginStatus.NotVerified){
             return false
         }
         else{
-        
             return true
         }
     }
+
     
-    func verify () {
-        loginStatus = LoginStatus.Verified }
+    func printData() {
+    }
 }
