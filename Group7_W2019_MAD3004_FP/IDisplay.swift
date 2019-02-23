@@ -8,8 +8,6 @@
 
 import Foundation
 
-enum OrderError: Error
-{
-    case invalidQuantity (newQty: Int)
-    case maxItemCountReached 
+protocol IDisplay {
+    func printData()
 }

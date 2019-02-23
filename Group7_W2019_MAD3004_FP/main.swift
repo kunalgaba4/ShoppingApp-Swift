@@ -8,19 +8,4 @@
 
 import Foundation
 
-
-
-var c1: Customers
-c1 = Customers(customerId: 1,customerName: "Sumit Kumar", address: "7361 SHALLFORD RD", email: "imsumitk1@gmail.com",password: "Test@123", creditCardInfo: "Visa Card", shippingInfo: "Toronto")!
-c1.printData()
-
-
-
-
-var order1: OrderDetails
-order1 = OrderDetails(orderId: 1, productId: 01, productName: "iphone", quantity: 2, unitCost: 1000, subTotal: <#T##Float#>)
-
-/*do
-{
-try 
-}*/
+var c1 = Customers(customerId: 1, customerName: "kunal Gaba", address: "706 brookmill", email: "kunal@k.com", password: "111@g", creditCardInfo: "12werer45", shippingInfo: "Toronto", loginStatus: LoginStatus.Verified)

@@ -14,3 +14,10 @@ enum LoginStatus : Int
     case Verified
     
 }
+
+
+enum OrderError: Error
+{
+    case invalidQuantity (newQty: Int)
+    case maxItemCountReached
+}
