@@ -30,3 +30,22 @@ func isValidPassword() -> Bool
 }
 
 }
+
+extension Date
+{
+    public func getForamttedDate() -> String
+    {
+        let dateFormatterPrint = DateFormatter()
+        dateFormatterPrint.dateFormat = "dd/MM/yyyy"
+        let formattedDate = dateFormatterPrint.string(from: self)
+        return formattedDate
+    }
+}
+
+extension Double
+{
+    public func currency() -> String
+    {
+        return String.init(format: "$%0.2f", self)
+    }
+}

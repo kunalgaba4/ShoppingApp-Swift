@@ -8,19 +8,20 @@
 
 import Foundation
 
-class ShoppingCart{
+/*class ShoppingCart : Customers{
     var cartId: Int
     var productId: Int
     var quantity: Int
-    var dateAdded: Int
+    var dateAdded: Date = Date()
     
-    init(cartId : Int, productId : Int, quantity : Int , dateAdded : Int ) {
+    init(cartId : Int, customerId: Int, productId: Int, quantity : Int , dateAdded : Date ) {
         self.cartId = cartId
         self.productId = productId
         self.quantity = quantity
         self.dateAdded = dateAdded
+        super.init(customerId: customerId, customerName: customerName, address: address, email: email, password: password, creditCardInfo: creditCardInfo, shippingInfo: shippingInfo, loginStatus: loginStatus)
     }
-    
+ 
     func updateQuantity(newQuantity: Int) throws {
         let newCount = self.quantity + newQuantity
         
@@ -47,4 +48,10 @@ class ShoppingCart{
     func checkOut(){
     
     }
+    
+    
+     func printdata(){
+        print("date: \(dateAdded)")
+    }
 }
+*/

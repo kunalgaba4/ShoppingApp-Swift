@@ -11,8 +11,6 @@ import Foundation
 
 
 class User: IDisplay{
-   
-
     var userId: Int!
     var password: String!
     var loginStatus : LoginStatus

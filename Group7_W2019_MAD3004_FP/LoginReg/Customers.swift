@@ -74,7 +74,7 @@ class Customers:User
 override func printData()
 {
     print("Customer ID    : \(String(describing: self.customerName))")
-    print("Customer Name  : \(String(describing: self.address))")
+    print("Customer Address  : \(String(describing: self.address))")
     print("Customer Email : \(String(describing: self.email))")
     print("Credit Card     : \(String(describing: self.creditCardInfo))")
     print("Shipping Info   : \(String(describing: self.shippingInfo))")

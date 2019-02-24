@@ -10,13 +10,13 @@ import Foundation
 
 
 class Orders {
-    var orderId: Int
-    var dateCreated: Date
-    var dateShipped: Date
-    var customerName: String
-    var customerId: Int
-    var status: String
-    var shippingId: String
+    var orderId: Int?
+    var dateCreated: Date = Date()
+    var dateShipped: Date = Date()
+    var customerName: String?
+    var customerId: Int?
+    var status: String?
+    var shippingId: String?
     
     init(orderId: Int, dateCreated: Date, dateShipped: Date, customerId: Int, customerName:String, status: String, shippingId: String   )
     {
@@ -29,7 +29,13 @@ class Orders {
         self.shippingId = shippingId
     }
     
-    func placeOrder(){
+    func display(){
+        print(self.orderId!,self.dateCreated.getForamttedDate(),self.dateShipped.getForamttedDate(),self.customerId!,self.customerName!,self.status!,self.shippingId!)
+        
+    }
+
+func placeOrder()
+{
     
     }
 }

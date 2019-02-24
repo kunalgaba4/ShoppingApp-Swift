@@ -81,10 +81,10 @@
 				C68F7B082218914D0052D5CF /* LoginReg */,
 				C68F7B052218892A0052D5CF /* Shipping */,
 				C68F7B002218877C0052D5CF /* Orders */,
-				9B1D8BEF2215069800D81C1E /* main.swift */,
 				0D196D85221F3BED0086BF81 /* Extensions.swift */,
 				0D62AECD221F7A120005BAFD /* IDisplay.swift */,
 				0D6E97B9222051AA005AAFDE /* Enum.swift */,
+				9B1D8BEF2215069800D81C1E /* main.swift */,
 			);
 			path = Group7_W2019_MAD3004_FP;
 			sourceTree = "<group>";
