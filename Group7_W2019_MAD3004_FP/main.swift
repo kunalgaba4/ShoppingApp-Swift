@@ -22,6 +22,9 @@ c1?.shoppingCart.addCartItem1(product: product1!)
 c1?.shoppingCart.updateQuantity1(product: .DVD, quantity: 20)
 c1?.shoppingCart.viewCartDetails1()
 
+var shippingInfo = ShippingInfo(shippingId: "1",shippingType: "Mail",shippingCost: 200,shippingRegionId: "region_id")
+c1?.placeOrder(shippingInfo: shippingInfo)
+
 
 //c1?.shoppingCart.viewCartDetails()
 //print(c1!.printData())

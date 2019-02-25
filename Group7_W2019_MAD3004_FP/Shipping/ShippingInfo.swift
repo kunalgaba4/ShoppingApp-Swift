@@ -8,13 +8,13 @@
 
 import Foundation
 
-class Shipping{
-    var shippingId: Int
+class ShippingInfo{
+    var shippingId: String
     var shippingType: String
     var shippingCost: Int
-    var shippingRegionId: Int
+    var shippingRegionId: String
     
-    init(shippingId: Int,shippingType: String,shippingCost: Int,shippingRegionId: Int)
+    init(shippingId: String,shippingType: String,shippingCost: Int,shippingRegionId: String)
     {
         self.shippingId = shippingId
         self.shippingType = shippingType

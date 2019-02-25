@@ -76,8 +76,13 @@ class Customers:User{
         
     }
     
-    func placeOrder(){
-        
+    func placeOrder(shippingInfo: ShippingInfo!){
+        if let shipingInfo1 = shippingInfo{
+            let order = Orders(dateShipped: Date(),customerId: userId,customerName: customerName,status: "Processing",shippingId: "1", shippingInfo: shipingInfo1)
+            order.placeOrder(shippingInfo: shippingInfo, products: shoppingCart.getArrayOfProducts)
+        }else{
+            print("Please pass the Shipping Information")
+        }
     }
     
    

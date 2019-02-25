@@ -11,6 +11,13 @@ import Foundation
 class ShoppingCart :IDisplay{
     var cartID:Int?
     var arrayProducts:[Product] = [Product]()
+    
+    var getArrayOfProducts: [Product] {
+        get{
+            return arrayProducts
+        }
+    }
+    
      var dateAdded:Date = Date()
     
 //    private var itemsDic = [ProductName : Int]()

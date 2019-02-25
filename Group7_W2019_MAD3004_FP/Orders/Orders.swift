@@ -12,20 +12,22 @@ import Foundation
 class Orders {
     var orderId = 0
     var dateCreated: String!
-    var dateShipped: Date
+    var dateShipped: Date!
     var customerName: String
-    var customerId: Int
+    let customerId: String
     var status: String
     var shippingId: String
+    var shippingInfo: ShippingInfo
 
     
-    init(dateShipped: Date, customerId: Int, customerName:String, status: String, shippingId: String){
+    init(dateShipped: Date, customerId: String, customerName:String, status: String, shippingId: String, shippingInfo: ShippingInfo){
         self.orderId = orderId+1
         self.dateShipped = dateShipped
         self.customerId = customerId
         self.customerName = customerName
         self.status = status
         self.shippingId = shippingId
+        self.shippingInfo = shippingInfo
         self.dateCreated = getCurrentDate()
     }
     
@@ -37,6 +39,9 @@ class Orders {
         return "\(month)-\(day)-\(year)"
     }
     
-    func placeOrder(){
+    func placeOrder(shippingInfo: ShippingInfo, products: [Product]){
+        print("Your Order is placed...!!")
+        let orderDetails = OrderDetails(orderId: self.orderId, arrayOfProducts: products)
+        orderDetails.calcPrice()
     }
 }

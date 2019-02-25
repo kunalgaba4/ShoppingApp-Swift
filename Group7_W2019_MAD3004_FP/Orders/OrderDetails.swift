@@ -8,29 +8,44 @@
 
 import Foundation
 
-class OrderDetails{
+class OrderDetails:IDisplay{
     var orderId: Int
-    var productId: Int
-    var productName: String
-    var quantity: Int
-    var unitCost: Float
-    var subTotal: Float
+//    var productId: Int
+//    var productName: String
+//    var quantity: Int
+//    var unitCost: Float
+    var subTotal: Float!
+    var productArray: [Product]
     
-    init(orderId: Int, productId: Int,productName: String, quantity: Int, unitCost: Float, subTotal: Float)
-    {
+    init(orderId: Int, arrayOfProducts: [Product]){
         self.orderId = orderId
-        self.productId = productId
-        self.productName = productName
-        self.quantity = quantity
-        self.unitCost = unitCost
-        self.subTotal = subTotal
+        self.productArray = arrayOfProducts
+        self.subTotal = calcSubTotal()
         
     }
     
+    func calcSubTotal()-> Float{
+        var subTotal : Float = 0
+        for productDetails in productArray{
+            subTotal = subTotal + Float(((productDetails.getProductUnitCost!) * (Float(productDetails.getProductQuantity!))))
+        }
+        return subTotal
+    }
     
     func calcPrice(){
+        print("Total cart price: \(self.subTotal!)")
+    }
     
+    func printData() {
+        print("OrderId : \(self.orderId)")
+        print("---------Product Details--------")
         
-    
+        for productDetails in productArray{
+            print("Product Id: \(productDetails.getProductID ?? 0)")
+            print("Product Name: \(String(describing: productDetails.getProductName!))")
+            print("Product Quantity: \(productDetails.getProductQuantity ?? 0)")
+            print("Product Cost: \(productDetails.getProductUnitCost ?? 0)")
+            print("-------------------------------------------------")
+        }
     }
 }
