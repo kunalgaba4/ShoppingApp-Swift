@@ -14,17 +14,15 @@ class Customers:User{
     var email: String
     var creditCardInfo: String
     var shippingInfo: String
-    var ordersArray: [Orders]!
     var dicOfCustomers = [String:Customers]()
     let shoppingCart = ShoppingCart.getShoppingCart()
     
-    init?(customerId: String,customerName: String,address: String,email: String,password: String,creditCardInfo: String,shippingInfo: String, loginStatus: LoginStatus, orders : [Orders]){
+    init?(customerId: String,customerName: String,address: String,email: String,password: String,creditCardInfo: String,shippingInfo: String, loginStatus: LoginStatus){
         self.customerName = customerName
         self.address = address
         self.email = email
         self.creditCardInfo = creditCardInfo
         self.shippingInfo = shippingInfo
-        self.ordersArray = orders
         super.init(userId: customerId, password: password, loginStatus:loginStatus)
 
         if customerId.isEmpty{
@@ -75,6 +73,10 @@ class Customers:User{
     }
     
     func updateProfile(){
+        
+    }
+    
+    func placeOrder(){
         
     }
     
