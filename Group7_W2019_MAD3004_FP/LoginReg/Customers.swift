@@ -18,6 +18,13 @@ class Customers:User{
     let shoppingCart = ShoppingCart.getShoppingCart()
     
     init?(customerId: String,customerName: String,address: String,email: String,password: String,creditCardInfo: String,shippingInfo: String, loginStatus: LoginStatus){
+        
+        if(!dicOfCustomers.isEmpty){
+            if dicOfCustomers[customerId] != nil {
+                return nil
+            }
+        }
+        
         self.customerName = customerName
         self.address = address
         self.email = email
