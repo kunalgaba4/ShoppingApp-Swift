@@ -9,42 +9,42 @@
 import Foundation
 
 class ShoppingCart{
-    var cartId: Int
-    var productId: Int
-    var quantity: Int
-    var dateAdded: Int
     
-    init(cartId : Int, productId : Int, quantity : Int , dateAdded : Int ) {
-        self.cartId = cartId
-        self.productId = productId
-        self.quantity = quantity
-        self.dateAdded = dateAdded
+    private var itemsDic = [Products : Int]()
+    
+    var getItemsFromCart : [Products:Int]{
+        get{
+            return itemsDic
+        }
+    }
+    init() {
     }
     
-    func updateQuantity(newQuantity: Int) throws {
-        let newCount = self.quantity + newQuantity
-        
-        guard newCount <= 5 else{
-            throw OrderError.invalidQuantity(newQty: 3)
+    
+    func addCartItem(product: Products,quantity: Int){
+        if itemsDic.keys.contains(product){
+            print("The Product is already in the card, so it's quantity is increased.")
+            itemsDic[product] = quantity+1
+        }else{
+            itemsDic[product]=quantity
+            print("Product is added to the cart")
         }
     }
     
-    
-    
-    
-    func addCartItem(){
-    
-    }
-    
-    func updateQuantity(){
-    
+    func updateQuantity(product: Products,quantity: Int){
+        addCartItem(product: product, quantity: quantity)
     }
     
     func viewCartDetails(){
+        
     
     }
     
     func checkOut(){
     
+    }
+    
+    static func getShoppingCart() -> ShoppingCart{
+        return ShoppingCart()
     }
 }

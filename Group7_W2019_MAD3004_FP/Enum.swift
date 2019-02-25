@@ -10,14 +10,19 @@ import Foundation
 
 enum LoginStatus : Int
 {
-    case NotVerified
+    case Not_Verified
     case Verified
     
 }
 
 
-enum OrderError: Error
-{
+enum OrderError: Error{
     case invalidQuantity (newQty: Int)
     case maxItemCountReached
+}
+
+enum Products: String{
+    case Hard_Disk
+    case CD
+    case DVD
 }

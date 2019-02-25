@@ -13,7 +13,7 @@ class Admin: User{
     var adminName: String!
     var email: String!
     
-    init(adminName: String, email: String, userId: Int, password: String,loginStatus: LoginStatus){
+    init?(adminName: String, email: String, userId: String, password: String,loginStatus: LoginStatus){
         self.adminName = adminName
         self.email = email
         super.init(userId: userId, password: password, loginStatus: loginStatus)
@@ -23,5 +23,8 @@ class Admin: User{
     func updateCatalog() -> Bool
     {
       return true
+    }
+    
+    override func printData() {
     }
 }

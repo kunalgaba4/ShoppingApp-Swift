@@ -10,17 +10,17 @@ import Foundation
 
 
 class Orders {
-    var orderId: Int
+    var orderId = 0
     var dateCreated: Date
     var dateShipped: Date
     var customerName: String
     var customerId: Int
     var status: String
     var shippingId: String
+
     
-    init(orderId: Int, dateCreated: Date, dateShipped: Date, customerId: Int, customerName:String, status: String, shippingId: String   )
-    {
-        self.orderId = orderId
+    init(orderId: Int, dateCreated: Date, dateShipped: Date, customerId: Int, customerName:String, status: String, shippingId: String){
+        self.orderId = orderId+1
         self.dateCreated = dateCreated
         self.dateShipped = dateShipped
         self.customerId = customerId
@@ -30,6 +30,5 @@ class Orders {
     }
     
     func placeOrder(){
-    
     }
 }
