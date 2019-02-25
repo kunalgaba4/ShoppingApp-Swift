@@ -69,14 +69,18 @@ class Customers:User{
         dicOfCustomers[customer.userId] = customer
     }
     
-    func login(userId: String, password: String){
+    func login(userId: String, password: String)-> Bool{
+        var login: Bool = false
         for (id, customer) in dicOfCustomers{
             if ((id == userId) && (customer.password == password)){
                 print("Successfuly login")
+                login = true
             }else{
                 print("User Id Password does not match")
+                login = false
             }
         }
+        return login
     }
     
     func updateProfile(){

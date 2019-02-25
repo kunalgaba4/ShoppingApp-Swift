@@ -25,4 +25,7 @@ enum ProductName: String{
     case Hard_Disk
     case CD
     case DVD
+    case LED_Monitor
+    case KEYBOARD
+    case IPHONE
 }
