@@ -21,7 +21,7 @@ enum OrderError: Error{
     case maxItemCountReached
 }
 
-enum Products: String{
+enum ProductName: String{
     case Hard_Disk
     case CD
     case DVD

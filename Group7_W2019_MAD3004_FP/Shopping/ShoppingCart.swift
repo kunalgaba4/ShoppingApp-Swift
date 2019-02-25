@@ -8,18 +8,32 @@
 
 import Foundation
 
-class ShoppingCart{
-     var arrayProducts:[Product] = [Product]()
-    private var itemsDic = [Products : Int]()
-    var getItemsFromCart : [Products:Int]{
-        get{
-            return itemsDic
-        }
-    }
+class ShoppingCart :IDisplay{
+    var cartID:Int?
+    var arrayProducts:[Product] = [Product]()
+     var dateAdded:Date = Date()
+    
+//    private var itemsDic = [ProductName : Int]()
+//    var getItemsFromCart : [ProductName:Int]{
+//        get{
+//            return itemsDic
+//        }
+//    }
     
     init() {
     }
     
+    init?(cartID: Int, dateAdded:Date, arrayProducts:[Product])
+    {
+        self.cartID = cartID
+        self.dateAdded = dateAdded
+        self.arrayProducts = arrayProducts
+        
+        for product in self.arrayProducts {
+            product.cartQuantityDefault(cartQuantity: 1)
+        }
+        
+    }
     
     func addCartItem1(product: Product) {
         if arrayProducts.allSatisfy({$0.getProductID != product.getProductID}) {
@@ -28,43 +42,29 @@ class ShoppingCart{
         else{
             print("Product Already In Cart")
         }
-
     }
     
-    func updateQuantity1(product: Products,quantity: Int ){
+    func updateQuantity1(product: ProductName,quantity: Int ){
         if arrayProducts.allSatisfy({$0.getProductName!.rawValue == product.rawValue}) {
-                
-        }
-        else{
-            print("Product Already In Cart")
-        }
-        
-    }
-    
-    
-    func addCartItem(product: Products,quantity: Int){
-        if itemsDic.keys.contains(product){
-            print("The Product is already in the card, so it's quantity is increased.")
-            itemsDic[product] = itemsDic[product]!+quantity
+            for a in arrayProducts{
+                if(a.getProductName!.rawValue == product.rawValue){
+                    a.updateQuantity(newQuantity: quantity)
+                }
+            }
         }else{
-            itemsDic[product]=quantity
-            print("Product is added to the cart")
+            print("Item is not available in the cart")
         }
     }
     
-    func updateQuantity(product: Products,quantity: Int){
-        addCartItem(product: product, quantity: quantity)
-    }
     
-    func viewCartDetails(){
-        for (product, quantity) in itemsDic{
-            print(product, quantity)
+    func viewCartDetails1(){
+        for a in arrayProducts{
+            print(a.getProductQuantity!)
         }
-    
     }
     
-    func checkOut(){
-        if itemsDic.isEmpty{
+    func checkOut1(){
+        if arrayProducts.isEmpty{
             print("Shopping cart is empty")
         }else{
             print("Checking Out")
@@ -74,4 +74,44 @@ class ShoppingCart{
     static func getShoppingCart() -> ShoppingCart{
         return ShoppingCart()
     }
+    
+    func printData() {
+        print("***************************************************")
+        print("Cart Id: \(self.cartID!) Date Added: \(self.dateAdded)")
+        for product in self.arrayProducts {
+            product.display()
+        }
+    }
+    
+    
+//    func addCartItem(product: Products,quantity: Int){
+//        if itemsDic.keys.contains(product){
+//            print("The Product is already in the card, so it's quantity is increased.")
+//            itemsDic[product] = itemsDic[product]!+quantity
+//        }else{
+//            itemsDic[product]=quantity
+//            print("Product is added to the cart")
+//        }
+//    }
+//
+//    func updateQuantity(product: Products,quantity: Int){
+//        addCartItem(product: product, quantity: quantity)
+//    }
+//
+//    func viewCartDetails(){
+//        for (product, quantity) in itemsDic{
+//            print(product, quantity)
+//        }
+//
+//    }
+//
+//    func checkOut(){
+//        if itemsDic.isEmpty{
+//            print("Shopping cart is empty")
+//        }else{
+//            print("Checking Out")
+//        }
+//    }
+    
+    
 }

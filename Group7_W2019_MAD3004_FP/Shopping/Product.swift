@@ -15,9 +15,9 @@ class Product {
             return productId
         }
     }
-    var productName: Products
+    var productName: ProductName
     
-    var getProductName:Products?
+    var getProductName:ProductName?
     {
         get{
             return productName
@@ -37,13 +37,23 @@ class Product {
             return quantity
         }
     }
-    init(productId:Int,productName:Products,unitCost:Float,quantity:Int) {
+    init?(productId:Int,productName:ProductName,unitCost:Float,quantity:Int) {
         self.productId = productId
         self.productName = productName
         self.unitCost = unitCost
         self.quantity = quantity
         
+        if quantity <= 0 {
+            print("Quantity of item must be greater than 0")
+            return nil
+        }
+        if unitCost <= 0{
+            print("Cost of Item must be greater than 0")
+            return nil
+        }
+        
     }
+    
     //add quantity checks later
     func updateQuantity(newQuantity:Int) {
         self.quantity = self.quantity! + newQuantity
@@ -52,8 +62,7 @@ class Product {
         self.quantity =  cartQuantity
     }
     
-    func display()
-    {
+    func display(){
         print(self.productId!,self.productName,self.unitCost!, self.quantity!, separator:"\t")
         
     }}
