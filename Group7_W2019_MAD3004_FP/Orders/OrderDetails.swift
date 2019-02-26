@@ -8,16 +8,12 @@
 
 import Foundation
 
-
 class OrderDetails:IDisplay{
-
-/*class OrderDetails{
-
     var orderId: Int
-//    var productId: Int
-//    var productName: String
-//    var quantity: Int
-//    var unitCost: Float
+    //    var productId: Int
+    //    var productName: String
+    //    var quantity: Int
+    //    var unitCost: Float
     var subTotal: Float!
     var productArray: [Product]
     
@@ -52,4 +48,4 @@ class OrderDetails:IDisplay{
             print("-------------------------------------------------")
         }
     }
-}*/
+}

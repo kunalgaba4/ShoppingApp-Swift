@@ -1,4 +1,4 @@
-//
+
 //  Administration.swift
 //  Group7_W2019_MAD3004_FP
 //
@@ -8,10 +8,7 @@
 
 import Foundation
 
-
-class Admin: User{
-    
-
+class Administration: User{
     var adminName: String!
     var email: String!
     
@@ -22,11 +19,9 @@ class Admin: User{
     }
     
     func updateCatalog() -> Bool{
-      return true
+        return true
     }
-
     
     override func printData() {
     }
 }
-

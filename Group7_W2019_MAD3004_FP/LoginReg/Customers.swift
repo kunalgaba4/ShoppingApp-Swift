@@ -7,12 +7,8 @@
 //
 
 import Foundation
- 
 
-
-
-class Customers:User
-{
+class Customers:User{
     var customerName: String
     var address: String
     var email: String
@@ -21,7 +17,6 @@ class Customers:User
     var dicOfCustomers = [String:Customers]()
     let shoppingCart = ShoppingCart.getShoppingCart()
     
-
     init?(customerId: String,customerName: String,address: String,email: String,password: String,creditCardInfo: String,shippingInfo: String, loginStatus: LoginStatus){
         
         if(!dicOfCustomers.isEmpty){
@@ -30,43 +25,19 @@ class Customers:User
             }
         }
         
-
-   required init(){
-    
-        self.customerName = String()
-        self.address = String()
-        self.email = String()
-        self.creditCardInfo = String()
-        self.shippingInfo = String()
-    }
-    super.init(){
-        
-    }
-    init?(customerName: String,address: String,email: String,creditCardInfo: String,shippingInfo: String){
-        
-    
-
-    
-    init?(customerId: Int,customerName: String,address: String,email: String,password: String,creditCardInfo: String,shippingInfo: String, loginStatus: LoginStatus ){
         self.customerName = customerName
         self.address = address
         self.email = email
         self.creditCardInfo = creditCardInfo
         self.shippingInfo = shippingInfo
         super.init(userId: customerId, password: password, loginStatus:loginStatus)
-
-
+        
         if customerId.isEmpty{
             print("Customer ID should not be empty")
             return nil
         }
         
         if customerName.count < 10{
-
-    
-        if customerName.count < 10
-        {
-
             print("Customer Name must be >= 10 length")
             return nil
         }
@@ -125,21 +96,15 @@ class Customers:User
         }
     }
     
-   
     
-
-
-override func printData(){
-    super.printData()
-    print("Customer ID    : \(String(describing: self.customerName))")
-
-override func printData()
-{
-    print("Customer Name    : \(String(describing: self.customerName))")
-    print("Customer Name  : \(String(describing: self.address))")
-    print("Customer Email : \(String(describing: self.email))")
-    print("Credit Card     : \(String(describing: self.creditCardInfo))")
-    print("Shipping Info   : \(String(describing: self.shippingInfo))")
+    
+    
+    override func printData(){
+        super.printData()
+        print("Customer ID    : \(String(describing: self.customerName))")
+        print("Customer Name  : \(String(describing: self.address))")
+        print("Customer Email : \(String(describing: self.email))")
+        print("Credit Card     : \(String(describing: self.creditCardInfo))")
+        print("Shipping Info   : \(String(describing: self.shippingInfo))")
     }
 }
-
