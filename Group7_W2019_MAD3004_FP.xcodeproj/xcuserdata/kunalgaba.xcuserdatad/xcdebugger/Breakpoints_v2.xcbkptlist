@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Group7_W2019_MAD3004_FP/Shopping/ShoppingCart.swift"
+            timestampString = "572830251.28098"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "addCartItem1(product:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Group7_W2019_MAD3004_FP.ShoppingCart.addCartItem1(product: Group7_W2019_MAD3004_FP.Product) -&gt; ()"
+                  moduleName = "Group7_W2019_MAD3004_FP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kunalgaba/Documents/Group7_W2019_MAD3004_FP/Group7_W2019_MAD3004_FP/Shopping/ShoppingCart.swift"
+                  timestampString = "572779975.068249"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "43">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Group7_W2019_MAD3004_FP.Product) -&gt; Swift.Bool in Group7_W2019_MAD3004_FP.ShoppingCart.addCartItem1(product: Group7_W2019_MAD3004_FP.Product) -&gt; ()"
+                  moduleName = "Group7_W2019_MAD3004_FP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kunalgaba/Documents/Group7_W2019_MAD3004_FP/Group7_W2019_MAD3004_FP/Shopping/ShoppingCart.swift"
+                  timestampString = "572779975.084762"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "34">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Group7_W2019_MAD3004_FP/Shopping/ShoppingCart.swift"
+            timestampString = "572830251.281109"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "ShoppingCart"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Group7_W2019_MAD3004_FP/Shopping/ShoppingCart.swift"
+            timestampString = "572830251.281216"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "init()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

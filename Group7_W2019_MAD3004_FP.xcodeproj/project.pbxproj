@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0886927A2223E66000B7C6A5 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088692792223E66000B7C6A5 /* Product.swift */; };
 		0D196D86221F3BED0086BF81 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D196D85221F3BED0086BF81 /* Extensions.swift */; };
 		0D62AECE221F7A120005BAFD /* IDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D62AECD221F7A120005BAFD /* IDisplay.swift */; };
 		0D6E97BA222051AA005AAFDE /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6E97B9222051AA005AAFDE /* Enum.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		088692792223E66000B7C6A5 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		0D196D85221F3BED0086BF81 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		0D62AECD221F7A120005BAFD /* IDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDisplay.swift; sourceTree = "<group>"; };
 		0D6E97B9222051AA005AAFDE /* Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
@@ -86,13 +88,13 @@
 				C68F7B052218892A0052D5CF /* Shipping */,
 				C68F7B002218877C0052D5CF /* Orders */,
 				9B1D8BEF2215069800D81C1E /* main.swift */,
-<<<<<<< HEAD
+
 				C699D3D1221E027A00CE935E /* IDisplay.swift */,
-=======
+
 				0D196D85221F3BED0086BF81 /* Extensions.swift */,
 				0D62AECD221F7A120005BAFD /* IDisplay.swift */,
 				0D6E97B9222051AA005AAFDE /* Enum.swift */,
->>>>>>> 04199c421ba5ea69cf9d8ac3925ec0d70817d366
+
 			);
 			path = Group7_W2019_MAD3004_FP;
 			sourceTree = "<group>";
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				C68F7AFC221885CE0052D5CF /* ShoppingCart.swift */,
+				088692792223E66000B7C6A5 /* Product.swift */,
 			);
 			path = Shopping;
 			sourceTree = "<group>";
@@ -208,11 +211,12 @@
 				C68F7AFB2218835E0052D5CF /* Customers.swift in Sources */,
 				C68F7B0C221893200052D5CF /* Administration.swift in Sources */,
 				C68F7B0722188E580052D5CF /* ShippingInfo.swift in Sources */,
-<<<<<<< HEAD
+				0886927A2223E66000B7C6A5 /* Product.swift in Sources */,
+
 				C699D3D2221E027A00CE935E /* IDisplay.swift in Sources */,
-=======
+
 				0D62AECE221F7A120005BAFD /* IDisplay.swift in Sources */,
->>>>>>> 04199c421ba5ea69cf9d8ac3925ec0d70817d366
+
 				C68F7B0A221891A10052D5CF /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

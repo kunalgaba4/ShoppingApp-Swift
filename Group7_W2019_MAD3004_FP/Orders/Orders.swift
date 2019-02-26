@@ -9,23 +9,33 @@
 import Foundation
 
 
-<<<<<<< HEAD
+
 /*class Orders{
     var orderid: Int
     var dateCreated: String
     var dateShipped: String
-=======
+
 class Orders {
+
+    var orderId = 0
+    var dateCreated: String!
+    var dateShipped: Date!
+
     var orderId: Int
     var dateCreated: Date
     var dateShipped: Date
->>>>>>> 04199c421ba5ea69cf9d8ac3925ec0d70817d366
+
     var customerName: String
-    var customerId: Int
+    let customerId: String
     var status: String
     var shippingId: String
+    var shippingInfo: ShippingInfo
+
     
-<<<<<<< HEAD
+
+    init(dateShipped: Date, customerId: String, customerName:String, status: String, shippingId: String, shippingInfo: ShippingInfo){
+        self.orderId = orderId+1
+
 }
 
 init(){
@@ -33,21 +43,34 @@ init(){
     
     self.
 }
-=======
+
     init(orderId: Int, dateCreated: Date, dateShipped: Date, customerId: Int, customerName:String, status: String, shippingId: String   )
     {
         self.orderId = orderId
         self.dateCreated = dateCreated
+
         self.dateShipped = dateShipped
         self.customerId = customerId
         self.customerName = customerName
         self.status = status
         self.shippingId = shippingId
+        self.shippingInfo = shippingInfo
+        self.dateCreated = getCurrentDate()
     }
->>>>>>> 04199c421ba5ea69cf9d8ac3925ec0d70817d366
+
     
-    func placeOrder(){
+    func getCurrentDate()-> String{
+        let calendar = Calendar.current
+        let day = calendar.component(.day, from: Date())
+        let month = calendar.component(.month, from: Date())
+        let year = calendar.component(.year, from: Date())
+        return "\(month)-\(day)-\(year)"
+    }
     
+    func placeOrder(shippingInfo: ShippingInfo, products: [Product]){
+        print("Your Order is placed...!!")
+        let orderDetails = OrderDetails(orderId: self.orderId, arrayOfProducts: products)
+        orderDetails.calcPrice()
     }
 }
 */

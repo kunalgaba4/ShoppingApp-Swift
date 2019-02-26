@@ -8,11 +8,34 @@
 
 import Foundation
 
-<<<<<<< HEAD
+
+var c1 = Customers(customerId: "1", customerName: "kunal Gaba", address: "706 brookmill", email: "kunal@k.com", password: "111@1212g", creditCardInfo: "12werer45", shippingInfo: "Toronto", loginStatus: LoginStatus.Verified)
+
+c1?.login(userId: "1", password:"111@1212g")
+    
+
+//
+//c1?.shoppingCart.addCartItem(product: .Hard_Disk, quantity: 10)
+//c1?.shoppingCart.addCartItem(product: .Hard_Disk, quantity: 10)
+
+var product1 = Product(productId: 1,productName: ProductName.DVD,unitCost: 100,quantity: 10)
+var product2 = Product(productId: 1,productName: ProductName.DVD,unitCost: 100,quantity: 10)
+
+c1?.shoppingCart.addCartItem1(product: product1!)
+c1?.shoppingCart.updateQuantity1(product: .DVD, quantity: 20)
+c1?.shoppingCart.viewCartDetails1()
+
+var shippingInfo = ShippingInfo(shippingId: "1",shippingType: "Mail",shippingCost: 200,shippingRegionId: "region_id")
+c1?.placeOrder(shippingInfo: shippingInfo)
+
+
+//c1?.shoppingCart.viewCartDetails()
+//print(c1!.printData())
+
 
 var c1: Customers
 c1 = Customers(customerName: "Sumit Kumar", address: "7361 SHALLFORD RD", email: "imsumitk1@gmail.com", creditCardInfo: "Visa Card", shippingInfo: "Toronto")!
 c1.printData()
-=======
+
 var c1 = Customers(customerId: 1, customerName: "kunal Gaba", address: "706 brookmill", email: "kunal@k.com", password: "111@g", creditCardInfo: "12werer45", shippingInfo: "Toronto", loginStatus: LoginStatus.Verified)
->>>>>>> 04199c421ba5ea69cf9d8ac3925ec0d70817d366
+
