@@ -23,7 +23,7 @@ class Product {
             return productName
         }
     }
-    private var unitCost:Float?
+    var unitCost:Float?
     var getProductUnitCost:Float?
     {
         get{

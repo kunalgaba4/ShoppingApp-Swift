@@ -12,16 +12,29 @@ class Administration: User{
     var adminName: String!
     var email: String!
     
-    init?(adminName: String, email: String, userId: String, password: String,loginStatus: LoginStatus){
+    init?(userId: String, password: String,adminName: String, email: String,loginStatus: LoginStatus)throws{
+        try super.init(userId: userId, password: password, loginStatus:loginStatus)
         self.adminName = adminName
         self.email = email
-        super.init(userId: userId, password: password, loginStatus: loginStatus)
+    
     }
     
-    func updateCatalog() -> Bool{
-        return true
+    func updateCatalog(products: [Product], updProduct:Product) -> Bool{
+        for i in products{
+            if ((i.getProductID == updProduct.getProductID) && (i.getProductName == updProduct.getProductName)){
+                updProduct.quantity = i.getProductQuantity
+                updProduct.unitCost = i.getProductUnitCost
+                return true
+            }
+            
+        }
+        print("Product is not found!")
+        return false
     }
     
     override func printData() {
+        super.printData()
+        print("Admin Name: \(String(describing: self.adminName!))")
+        print("Email: \(String(describing: self.email!))")
     }
 }

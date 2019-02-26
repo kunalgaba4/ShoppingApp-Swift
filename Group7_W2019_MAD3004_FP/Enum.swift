@@ -10,8 +10,8 @@ import Foundation
 
 enum LoginStatus : Int
 {
-    case Not_Verified
-    case Verified
+    case Not_Valid
+    case Valid
     
 }
 
@@ -19,6 +19,7 @@ enum LoginStatus : Int
 enum OrderError: Error{
     case invalidQuantity (newQty: Int)
     case maxItemCountReached
+    case Invalid(String)
 }
 
 enum ProductName: String{

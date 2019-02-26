@@ -8,32 +8,36 @@
 
 import Foundation
 class User: IDisplay{
-    let userId: String!
+    var userId: String!
     var password: String!
-    var loginStatus : LoginStatus
-    var userInfo=[String:String]()
+    var loginStatus = LoginStatus.Not_Valid
+    static var userInfo=[String:String]()
     
-    init?(userId: String, password: String,loginStatus:LoginStatus){
+    init() {
+    }
+    
+    init?(userId: String, password: String,loginStatus: LoginStatus) throws{
+        self.loginStatus=loginStatus
         self.userId = userId
         self.password = password
-        self.loginStatus = LoginStatus.Not_Verified
-        if userInfo.keys.contains(self.userId) {
-            print("User id is already taken")
-            return nil
+        if User.userInfo.keys.contains(self.userId) {
+            throw OrderError.Invalid("User Id is already taken...")
         }else{
-            userInfo[userId] = self.password;
+            User.userInfo[self.userId] = self.password;
         }
+       
     }
     
     
     func verifyLogin()-> Bool{
-        if(self.loginStatus == LoginStatus.Not_Verified){
+        if(self.loginStatus == LoginStatus.Not_Valid){
             return false
         }
         else{
             return true
         }
     }
+
     
     func printData() {
         print("User Id: \(String(describing: self.userId!))")
