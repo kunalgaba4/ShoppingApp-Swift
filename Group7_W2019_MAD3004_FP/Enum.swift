@@ -28,4 +28,10 @@ enum ProductName: String{
     case LED_Monitor
     case KEYBOARD
     case IPHONE
+    case MOUSE
+    case PEN_DRIVE
+    case FLOPPY_DISK
+    case RAM
+    case CAMERA
+    
 }
