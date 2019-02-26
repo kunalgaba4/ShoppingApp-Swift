@@ -18,29 +18,16 @@ class ShoppingCart :IDisplay{
         }
     }
     
-     var dateAdded:Date = Date()
+    var dateAdded:Date = Date()
     
-//    private var itemsDic = [ProductName : Int]()
-//    var getItemsFromCart : [ProductName:Int]{
-//        get{
-//            return itemsDic
-//        }
-//    }
+    //    private var itemsDic = [ProductName : Int]()
+    //    var getItemsFromCart : [ProductName:Int]{
+    //        get{
+    //            return itemsDic
+    //        }
+    //    }
     
     init() {
-
-/*class ShoppingCart{
-    var cartId: Int
-    var productId: Int
-    var quantity: Int
-    var dateAdded: Int
-    
-    init(cartId : Int, productId : Int, quantity : Int , dateAdded : Int ) {
-        self.cartId = cartId
-        self.productId = productId
-        self.quantity = quantity
-        self.dateAdded = dateAdded
-
     }
     
     init?(cartID: Int, dateAdded:Date, arrayProducts:[Product])
@@ -104,35 +91,34 @@ class ShoppingCart :IDisplay{
     }
     
     
-//    func addCartItem(product: Products,quantity: Int){
-//        if itemsDic.keys.contains(product){
-//            print("The Product is already in the card, so it's quantity is increased.")
-//            itemsDic[product] = itemsDic[product]!+quantity
-//        }else{
-//            itemsDic[product]=quantity
-//            print("Product is added to the cart")
-//        }
-//    }
-//
-//    func updateQuantity(product: Products,quantity: Int){
-//        addCartItem(product: product, quantity: quantity)
-//    }
-//
-//    func viewCartDetails(){
-//        for (product, quantity) in itemsDic{
-//            print(product, quantity)
-//        }
-//
-//    }
-//
-//    func checkOut(){
-//        if itemsDic.isEmpty{
-//            print("Shopping cart is empty")
-//        }else{
-//            print("Checking Out")
-//        }
-//    }
+    //    func addCartItem(product: Products,quantity: Int){
+    //        if itemsDic.keys.contains(product){
+    //            print("The Product is already in the card, so it's quantity is increased.")
+    //            itemsDic[product] = itemsDic[product]!+quantity
+    //        }else{
+    //            itemsDic[product]=quantity
+    //            print("Product is added to the cart")
+    //        }
+    //    }
+    //
+    //    func updateQuantity(product: Products,quantity: Int){
+    //        addCartItem(product: product, quantity: quantity)
+    //    }
+    //
+    //    func viewCartDetails(){
+    //        for (product, quantity) in itemsDic{
+    //            print(product, quantity)
+    //        }
+    //
+    //    }
+    //
+    //    func checkOut(){
+    //        if itemsDic.isEmpty{
+    //            print("Shopping cart is empty")
+    //        }else{
+    //            print("Checking Out")
+    //        }
+    //    }
     
     
 }
- */
