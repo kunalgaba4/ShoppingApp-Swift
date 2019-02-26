@@ -9,16 +9,16 @@
 import Foundation
 
 class ShoppingCart :IDisplay{
-    var cartID:Int?
+    var cartID:Int!
     var arrayProducts:[Product] = [Product]()
     
-    var getArrayOfProducts: [Product] {
+    var getArrayOfProductsInCart: [Product] {
         get{
             return arrayProducts
         }
     }
     
-    var dateAdded:Date = Date()
+    var dateAdded:Date!
     
     //    private var itemsDic = [ProductName : Int]()
     //    var getItemsFromCart : [ProductName:Int]{
@@ -42,12 +42,14 @@ class ShoppingCart :IDisplay{
         
     }
     
-    func addCartItem1(product: Product) {
+    func addCartItem1(cartID: Int, dateAdded:Date,product: Product) throws {
+        self.cartID=cartID
+        self.dateAdded=dateAdded
         if arrayProducts.allSatisfy({$0.getProductID != product.getProductID}) {
             arrayProducts.append(product)
         }
         else{
-            print("Product Already In Cart")
+            throw OrderError.Invalid("Product is already in the cart")
         }
     }
     
@@ -83,8 +85,13 @@ class ShoppingCart :IDisplay{
     }
     
     func printData() {
-        print("***************************************************")
-        print("Cart Id: \(self.cartID!) Date Added: \(self.dateAdded)")
+        if let c = cartID {
+            print("Cart Id \(c)")
+        }
+        if let d=dateAdded {
+            print("Date Added \(d)")
+        }
+    
         for product in self.arrayProducts {
             product.display()
         }

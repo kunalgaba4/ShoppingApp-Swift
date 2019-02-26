@@ -29,13 +29,21 @@ class User: IDisplay{
     }
     
     
-    func verifyLogin()-> Bool{
-        if(self.loginStatus == LoginStatus.Not_Valid){
-            return false
+    func verifyLogin(customer:[User])-> Bool{
+        var isLogin = false
+        for c in customer{
+            if c.userId == self.userId{
+                if c.password == self.password{
+                    self.loginStatus   = .Valid
+                    isLogin = true
+                }else{
+                    isLogin = false
+                }
+            }else{
+                isLogin = false
+            }
         }
-        else{
-            return true
-        }
+        return isLogin
     }
 
     

@@ -14,15 +14,26 @@ class Customers:User{
     private var email: String
     private var creditCardInfo: String
     private var shippingInfo: String
+    var shoppingCart1: [ShoppingCart1]
     static var dicOfCustomers = [String:Customers]()
     let shoppingCart = ShoppingCart.getShoppingCart()
     
+    override init?(userId: String, password: String, loginStatus: LoginStatus) throws {
+        self.customerName = String()
+        self.address = String()
+        self.email = String()
+        self.creditCardInfo = String()
+        self.shippingInfo = String()
+        self.shoppingCart1 = [ShoppingCart1]()
+        try super.init(userId: userId, password: password,loginStatus: loginStatus)
+    }
     override init(){
         self.customerName = String()
         self.address = String()
         self.email = String()
         self.creditCardInfo = String()
         self.shippingInfo = String()
+        self.shoppingCart1 = [ShoppingCart1]()
         super.init()
     }
     
@@ -93,7 +104,11 @@ class Customers:User{
     func placeOrder(shippingInfo: ShippingInfo!){
         if let shipingInfo1 = shippingInfo{
             let order = Orders(dateShipped: Date(),customerId: userId,customerName: customerName,status: "Processing",shippingId: "1", shippingInfo: shipingInfo1)
-            order.placeOrder(shippingInfo: shippingInfo, products: shoppingCart.getArrayOfProducts)
+            var arrayOfProducts = [Product]()
+            for i in shoppingCart1{
+                arrayOfProducts.append(i.getProduct!)
+            }
+            order.placeOrder(shippingInfo: shippingInfo, products: arrayOfProducts)
         }else{
             print("Please pass the Shipping Information")
         }
@@ -108,6 +123,8 @@ class Customers:User{
         print("Customer Address  : \(String(describing: self.address))")
         print("Customer Email : \(String(describing: self.email))")
         print("Credit Card     : \(String(describing: self.creditCardInfo))")
+        print("Items in the Cart-----")
+        shoppingCart.printData()
         print("Shipping Info   : \(String(describing: self.shippingInfo))")
     }
 }

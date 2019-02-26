@@ -15,7 +15,7 @@ class Product {
             return productId
         }
     }
-    var productName: ProductName
+    var productName: ProductName?
     
     var getProductName:ProductName?
     {
@@ -37,6 +37,11 @@ class Product {
             return quantity
         }
     }
+    
+    init() {
+        
+    }
+    
     init?(productId:Int,productName:ProductName,unitCost:Float,quantity:Int) {
         self.productId = productId
         self.productName = productName
@@ -53,17 +58,15 @@ class Product {
         }
         
     }
-    
-    //add quantity checks later
     func updateQuantity(newQuantity:Int) {
-        self.quantity = self.quantity! + newQuantity
+        self.quantity = newQuantity
     }
     func cartQuantityDefault(cartQuantity:Int) {
         self.quantity =  cartQuantity
     }
     
     func display(){
-        print(self.productId!,self.productName,self.unitCost!, self.quantity!, separator:"\t")
-        
+        print("Product Details")
+        print("Product Id:\(self.productId!)","Prod Name:\(self.productName!)","Cost:\(self.unitCost!)", "Quant:\(self.quantity!)", separator:"\t")
     }}
 

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0886927A2223E66000B7C6A5 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088692792223E66000B7C6A5 /* Product.swift */; };
+		0886927C2225C9E000B7C6A5 /* ShoppingCart1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0886927B2225C9E000B7C6A5 /* ShoppingCart1.swift */; };
 		0D196D86221F3BED0086BF81 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D196D85221F3BED0086BF81 /* Extensions.swift */; };
 		0D62AECE221F7A120005BAFD /* IDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D62AECD221F7A120005BAFD /* IDisplay.swift */; };
 		0D6E97BA222051AA005AAFDE /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6E97B9222051AA005AAFDE /* Enum.swift */; };
@@ -35,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		088692792223E66000B7C6A5 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		0886927B2225C9E000B7C6A5 /* ShoppingCart1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCart1.swift; sourceTree = "<group>"; };
 		0D196D85221F3BED0086BF81 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		0D62AECD221F7A120005BAFD /* IDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDisplay.swift; sourceTree = "<group>"; };
 		0D6E97B9222051AA005AAFDE /* Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			children = (
 				C68F7AFC221885CE0052D5CF /* ShoppingCart.swift */,
 				088692792223E66000B7C6A5 /* Product.swift */,
+				0886927B2225C9E000B7C6A5 /* ShoppingCart1.swift */,
 			);
 			path = Shopping;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0886927C2225C9E000B7C6A5 /* ShoppingCart1.swift in Sources */,
 				C68F7B04221887E20052D5CF /* OrderDetails.swift in Sources */,
 				0D196D86221F3BED0086BF81 /* Extensions.swift in Sources */,
 				9B1D8BF02215069800D81C1E /* main.swift in Sources */,

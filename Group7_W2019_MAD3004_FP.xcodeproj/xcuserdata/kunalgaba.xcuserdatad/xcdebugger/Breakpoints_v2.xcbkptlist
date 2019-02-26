@@ -10,71 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Group7_W2019_MAD3004_FP/Shopping/ShoppingCart.swift"
-            timestampString = "572840321.838958"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "addCartItem1(product:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Group7_W2019_MAD3004_FP.ShoppingCart.addCartItem1(product: Group7_W2019_MAD3004_FP.Product) -&gt; ()"
-                  moduleName = "Group7_W2019_MAD3004_FP"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kunalgaba/Documents/Group7_W2019_MAD3004_FP/Group7_W2019_MAD3004_FP/Shopping/ShoppingCart.swift"
-                  timestampString = "572779975.068249"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "25"
-                  endingLineNumber = "25"
-                  offsetFromSymbolStart = "43">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Group7_W2019_MAD3004_FP.Product) -&gt; Swift.Bool in Group7_W2019_MAD3004_FP.ShoppingCart.addCartItem1(product: Group7_W2019_MAD3004_FP.Product) -&gt; ()"
-                  moduleName = "Group7_W2019_MAD3004_FP"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kunalgaba/Documents/Group7_W2019_MAD3004_FP/Group7_W2019_MAD3004_FP/Shopping/ShoppingCart.swift"
-                  timestampString = "572779975.084762"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "25"
-                  endingLineNumber = "25"
-                  offsetFromSymbolStart = "34">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Group7_W2019_MAD3004_FP/Shopping/ShoppingCart.swift"
-            timestampString = "572840321.839069"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "ShoppingCart"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Group7_W2019_MAD3004_FP/Shopping/ShoppingCart.swift"
-            timestampString = "572840321.8391531"
+            timestampString = "572909720.257773"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "31"
@@ -90,12 +26,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Group7_W2019_MAD3004_FP/LoginReg/User.swift"
-            timestampString = "572896694.23141"
+            timestampString = "572909720.257901"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "11"
             endingLineNumber = "11"
             landmarkName = "User"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Group7_W2019_MAD3004_FP/Shopping/ShoppingCart1.swift"
+            timestampString = "572909720.258008"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "ShoppingCart1"
             landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
