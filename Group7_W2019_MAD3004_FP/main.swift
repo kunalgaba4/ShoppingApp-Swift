@@ -25,21 +25,21 @@ var admin1 = try Administration(userId: "3",password: "kunal@123",adminName: "Ku
 admin1?.printData()
 
 
+// Creating Products
+var product1 = Product(productId: 1,productName: ProductName.CD,unitCost: 100,quantity: 20)
+let product2 = Product(productId: 2,productName: ProductName.DVD,unitCost: 100,quantity: 40)
+let product3 = Product(productId: 3,productName: ProductName.IPHONE,unitCost: 100,quantity: 10)
+let product4 = Product(productId: 4,productName: ProductName.Hard_Disk,unitCost: 100,quantity: 11)
+let product5 = Product(productId: 5,productName: ProductName.LED_Monitor,unitCost: 100,quantity: 22)
+
+var products = [Product]()
+products.append(product1!)
+products.append(product2!)
+products.append(product3!)
+products.append(product4!)
+products.append(product5!)
+
 do{
-    // Creating Products
-    var product1 = Product(productId: 1,productName: ProductName.CD,unitCost: 100,quantity: 20)
-    let product2 = Product(productId: 2,productName: ProductName.DVD,unitCost: 100,quantity: 40)
-    let product3 = Product(productId: 3,productName: ProductName.IPHONE,unitCost: 100,quantity: 10)
-    let product4 = Product(productId: 4,productName: ProductName.Hard_Disk,unitCost: 100,quantity: 11)
-    let product5 = Product(productId: 5,productName: ProductName.LED_Monitor,unitCost: 100,quantity: 22)
-
-    var products = [Product]()
-    products.append(product1!)
-    products.append(product2!)
-    products.append(product3!)
-    products.append(product4!)
-    products.append(product5!)
-
     //Update the product by administrator
     let prodToBeUpdated = Product(productId: 1,productName: ProductName.CD,unitCost: 200,quantity: 20)
     if admin1!.updateCatalog(products: products,updProduct: prodToBeUpdated!) {
@@ -52,7 +52,14 @@ do{
     try customer1.registerCustomer1(customerId: "4", customerName: "Jagmeet Kaur", address: "abc",email: "Jagmeet@gmail.com", password: "jag@123G",creditCardInfo:"123456789",shippingInfo: "address",loginStatus: .Not_Valid)
     //print the Data of the Customer.
     customer1.printData()
-    
+    //Updating Customer Profile
+        customer1.customerName = "Nayayjeet Sharma"
+        customer1.address = "699 HBR"
+    try customer1.updateProfile(customer: arrayOfcustomer)
+        //Priniting Update customer Profile Information
+        customer1.printData()
+        
+   
     
     print("Adding Items into the Cart..........")
     
@@ -73,8 +80,7 @@ do{
         cartDetails.printData()
     }
 
-    
-    
+
     //Update quantity
     if(cartProduct1.updateQuantity(customer: customer1, newQty: 40)){
         print("----Quantity Updated-----")

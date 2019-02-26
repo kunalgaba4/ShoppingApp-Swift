@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Group7_W2019_MAD3004_FP/Shopping/ShoppingCart.swift"
-            timestampString = "572909720.257773"
+            timestampString = "572910891.427188"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "31"
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Group7_W2019_MAD3004_FP/LoginReg/User.swift"
-            timestampString = "572909720.257901"
+            timestampString = "572910891.427318"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "11"
@@ -42,13 +42,29 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Group7_W2019_MAD3004_FP/Shopping/ShoppingCart1.swift"
-            timestampString = "572909720.258008"
+            timestampString = "572910891.4274499"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "52"
             endingLineNumber = "52"
-            landmarkName = "ShoppingCart1"
-            landmarkType = "3">
+            landmarkName = "updateQuantity(customer:newQty:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Group7_W2019_MAD3004_FP/LoginReg/Customers.swift"
+            timestampString = "572910891.4275531"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
+            landmarkName = "updateProfile(customer:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

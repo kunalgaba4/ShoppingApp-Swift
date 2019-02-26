@@ -9,11 +9,11 @@
 import Foundation
 
 class Customers:User{
-    private var customerName: String
-    private var address: String
-    private var email: String
-    private var creditCardInfo: String
-    private var shippingInfo: String
+    var customerName: String
+    var address: String
+    var email: String
+    var creditCardInfo: String
+    var shippingInfo: String
     var shoppingCart1: [ShoppingCart1]
     static var dicOfCustomers = [String:Customers]()
     let shoppingCart = ShoppingCart.getShoppingCart()
@@ -96,9 +96,19 @@ class Customers:User{
         return login
     }
     
-    func updateProfile(){
-        
-        
+    func updateProfile(customer: [Customers]){
+        for c in customer{
+            if c.userId == self.userId{
+                c.customerName = self.customerName
+                c.address = self.address
+                c.email = self.email
+                c.shippingInfo = self.shippingInfo
+                c.creditCardInfo = self.creditCardInfo
+                print("Profile Updated")
+            }else{
+                print("Unable to update profile")
+            }
+        }
     }
     
     func placeOrder(shippingInfo: ShippingInfo!){
