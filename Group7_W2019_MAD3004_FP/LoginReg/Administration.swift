@@ -8,7 +8,10 @@
 
 import Foundation
 
+
 class Admin: User{
+    
+
     var adminName: String!
     var email: String!
     
@@ -21,7 +24,9 @@ class Admin: User{
     func updateCatalog() -> Bool{
       return true
     }
+
     
     override func printData() {
     }
 }
+

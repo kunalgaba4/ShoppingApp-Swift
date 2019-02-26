@@ -28,6 +28,19 @@ class ShoppingCart :IDisplay{
 //    }
     
     init() {
+
+/*class ShoppingCart{
+    var cartId: Int
+    var productId: Int
+    var quantity: Int
+    var dateAdded: Int
+    
+    init(cartId : Int, productId : Int, quantity : Int , dateAdded : Int ) {
+        self.cartId = cartId
+        self.productId = productId
+        self.quantity = quantity
+        self.dateAdded = dateAdded
+
     }
     
     init?(cartID: Int, dateAdded:Date, arrayProducts:[Product])
@@ -122,3 +135,4 @@ class ShoppingCart :IDisplay{
     
     
 }
+ */

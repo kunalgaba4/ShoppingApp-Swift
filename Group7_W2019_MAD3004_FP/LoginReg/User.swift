@@ -25,6 +25,11 @@ class User: IDisplay{
         }
     }
     
+<<<<<<< HEAD
+    func verifyLogin(){
+
+}
+=======
     
     func verifyLogin()-> Bool{
         if(self.loginStatus == LoginStatus.Not_Verified){
@@ -39,4 +44,5 @@ class User: IDisplay{
         print("User Id: \(String(describing: self.userId!))")
         print("Login Status: \(self.loginStatus)")
     }
+>>>>>>> 04199c421ba5ea69cf9d8ac3925ec0d70817d366
 }

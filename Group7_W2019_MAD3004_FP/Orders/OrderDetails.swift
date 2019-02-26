@@ -8,7 +8,11 @@
 
 import Foundation
 
+
 class OrderDetails:IDisplay{
+
+/*class OrderDetails{
+
     var orderId: Int
 //    var productId: Int
 //    var productName: String
@@ -48,4 +52,4 @@ class OrderDetails:IDisplay{
             print("-------------------------------------------------")
         }
     }
-}
+}*/
