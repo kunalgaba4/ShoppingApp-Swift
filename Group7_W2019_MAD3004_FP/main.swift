@@ -50,14 +50,16 @@ do{
     //AddCustomer
     let customer1 = Customers()
     try customer1.registerCustomer1(customerId: "4", customerName: "Jagmeet Kaur", address: "abc",email: "Jagmeet@gmail.com", password: "jag@123G",creditCardInfo:"123456789",shippingInfo: "address",loginStatus: .Not_Valid)
+    
     //print the Data of the Customer.
     customer1.printData()
+    
     //Updating Customer Profile
-        customer1.customerName = "Nayayjeet Sharma"
-        customer1.address = "699 HBR"
-    try customer1.updateProfile(customer: arrayOfcustomer)
-        //Priniting Update customer Profile Information
-        customer1.printData()
+    customer1.customerName = "Nayayjeet Sharma"
+    customer1.address = "699 HBR"
+    customer1.updateProfile(customer: arrayOfcustomer)
+    //Priniting Update customer Profile Information
+    customer1.printData()
         
    
     
