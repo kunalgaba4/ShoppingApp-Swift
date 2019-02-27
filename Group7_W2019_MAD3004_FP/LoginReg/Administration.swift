@@ -14,8 +14,19 @@ class Administration: User{
     
     init?(userId: String, password: String,adminName: String, email: String,loginStatus: LoginStatus)throws{
         try super.init(userId: userId, password: password, loginStatus:loginStatus)
-        self.adminName = adminName
-        self.email = email    
+        if adminName.isEmpty {
+            print("Admin name is cannot be empty")
+            return nil
+        }else{
+            self.adminName = adminName
+        }
+        if !email.isValidEmail(){
+            print("Please enter valid email address")
+            return nil
+        }else{
+            self.email = email
+        }
+        
     }
     
     func updateCatalog(products: [Product], updProduct:Product) -> Bool{

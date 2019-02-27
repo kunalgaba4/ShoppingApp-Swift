@@ -1,7 +1,6 @@
 
 //  User.swift
 //  Group7_W2019_MAD3004_FP
-//
 //  Created by sumit kumar on 16/02/19.
 //  Copyright © 2019 MacStudent. All rights reserved.
 //
@@ -25,9 +24,7 @@ class User: IDisplay{
         }else{
             User.userInfo[self.userId] = self.password;
         }
-       
     }
-    
     
     func verifyLogin(customer:[User])-> Bool{
         var isLogin = false

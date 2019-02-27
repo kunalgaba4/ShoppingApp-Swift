@@ -21,7 +21,7 @@ if((user1?.verifyLogin(customer: arrayOfcustomer))!){
 }
 
 //Add administrator
-var admin1 = try Administration(userId: "3",password: "kunal@123",adminName: "Kunal",email: "Kunal@123mail",loginStatus: LoginStatus.Valid)
+var admin1 = try Administration(userId: "3",password: "kunal@123",adminName: "Kunal",email: "Kunal@123mail.com",loginStatus: LoginStatus.Valid)
 admin1?.printData()
 
 
@@ -30,6 +30,7 @@ do{
     //AddCustomer
     let customer1 = Customers()
     try customer1.registerCustomer1(customerId: "4", customerName: "Jagmeet Kaur", address: "abc",email: "Jagmeet@gmail.com", password: "jag@123G",creditCardInfo:"123456789",shippingInfo: "address",loginStatus: .Not_Valid)
+    arrayOfcustomer.append(customer1)
     
     //Updating Customer Profile
     customer1.customerName = "Kunal"
