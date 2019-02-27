@@ -40,7 +40,7 @@ do{
     
    
     // Creating Products
-    var product1 = Product(productId: 1,productName: ProductName.CD,unitCost: 100,quantity: 20)
+    let product1 = Product(productId: 1,productName: ProductName.CD,unitCost: 100,quantity: 20)
     let product2 = Product(productId: 2,productName: ProductName.DVD,unitCost: 100,quantity: 40)
     let product3 = Product(productId: 3,productName: ProductName.IPHONE,unitCost: 100,quantity: 10)
     let product4 = Product(productId: 4,productName: ProductName.Hard_Disk,unitCost: 100,quantity: 11)
