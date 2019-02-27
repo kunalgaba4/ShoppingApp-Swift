@@ -20,14 +20,20 @@ class Administration: User{
     
     func updateCatalog(products: [Product], updProduct:Product) -> Bool{
         for i in products{
-            if ((i.getProductID == updProduct.getProductID) && (i.getProductName == updProduct.getProductName)){
-                updProduct.quantity = i.getProductQuantity
-                updProduct.unitCost = i.getProductUnitCost
-                return true
+            if ((i.getProductID == updProduct.getProductID) && (i.getProductName==updProduct.getProductName)){
+                if((updProduct.getProductQuantity ?? -1 < 0) || (Int(updProduct.getProductUnitCost ?? -1) < 0)){
+                    return false
+                }else{
+                    updProduct.quantity = i.getProductQuantity
+                    updProduct.unitCost = i.getProductUnitCost
+                    return true
+                }
+                
+            }else{
+                print("Product Id or name is incorrect")
+                return false
             }
-            
         }
-        print("Product is not found!")
         return false
     }
     

@@ -9,33 +9,32 @@
 import Foundation
 
 var arrayOfcustomer = [Customers]()
-
-//Add User
-let user1 = try Customers(userId: "1",password: "Kunal@1234",loginStatus: LoginStatus.Valid)
-arrayOfcustomer.append(user1!)
-
-if((user1?.verifyLogin(customer: arrayOfcustomer))!){
-    print("Successfully Login")
-}else{
-    print("Username or password is incorrect")
-}
-
-//Add administrator
-var admin1 = try Administration(userId: "3",password: "kunal@123",adminName: "Kunal",email: "Kunal@123mail",loginStatus: LoginStatus.Valid)
-admin1?.printData()
-
-
-
 do{
+    let user1 = try Customers(userId: "1",password: "Kunal@1234",loginStatus: LoginStatus.Valid)
+    arrayOfcustomer.append(user1!)
+    
+    if((user1?.verifyLogin(customer: arrayOfcustomer))!){
+        print("Successfully Login")
+    }else{
+        print("Username or password is incorrect")
+    }
+    //Add administrator
+    let admin1 = try Administration(userId: "3",password: "kunal@123",adminName: "Kunal",email: "Kunal@123mail",loginStatus: LoginStatus.Valid)
+    
+    //Print the information about the admin
+    //admin1?.printData()
+    
     //AddCustomer
     let customer1 = Customers()
     try customer1.registerCustomer1(customerId: "4", customerName: "Jagmeet Kaur", address: "abc",email: "Jagmeet@gmail.com", password: "jag@123G",creditCardInfo:"123456789",shippingInfo: "address",loginStatus: .Not_Valid)
+    arrayOfcustomer.append(customer1)
     
     //Updating Customer Profile
     customer1.customerName = "Kunal"
     customer1.address = "15 Hockley Path"
     customer1.updateProfile(customer: arrayOfcustomer)
-    //Priniting Update customer Profile Information
+    
+//     Priniting Update customer Profile Information
 //    customer1.printData()
     
    
@@ -54,13 +53,16 @@ do{
     products.append(product5!)
     
     //Update the product by administrator
-    let prodToBeUpdated = Product(productId: 1,productName: ProductName.CD,unitCost: 200,quantity: 20)
-    if admin1!.updateCatalog(products: products,updProduct: prodToBeUpdated!) {
-        print("Product Updated Succesfully")
+    let prodToBeUpdated = Product(productId: 1,productName: ProductName.CD,unitCost: -1,quantity: 20)
+    if let p = prodToBeUpdated {
+        if admin1!.updateCatalog(products: products,updProduct: p) {
+            print("Product Updated Succesfully")
+        }
     }
+   
 
-    print("Adding Items into the Cart..........")
-    // Add products to Shopping Cart
+    print("\n.......Adding Items into the Cart..........")
+    // Add products to Shopping Cart
     let cartProduct1 = ShoppingCart1(cartId: 1, product:product1! , dateAdded: Date())
     let cartProduct2 = ShoppingCart1(cartId: 1, product:product2! , dateAdded: Date())
     let cartProduct3 = ShoppingCart1(cartId: 1, product:product3! , dateAdded: Date())
@@ -78,14 +80,11 @@ do{
     }
     
     //Update quantity
+    print("\n-----Updating Quantity------")
     if(cartProduct1.updateQuantity(customer: customer1, newQty: 40)){
-        print("----Quantity Updated-----")
+        print("\n----Quantity Updated-----")
     }else{
         print("Updation Failed")
-    }
-    //Check the updated Quantity
-    for userCartDetail in customer1.shoppingCart1{
-        userCartDetail.printData()
     }
     
     //Add Shipping Information

@@ -38,11 +38,18 @@ class Customers:User{
     
     func registerCustomer1(customerId: String,customerName: String,address: String,email: String,password: String,creditCardInfo: String,shippingInfo: String, loginStatus : LoginStatus) throws{
         
-        if(!Customers.dicOfCustomers.isEmpty){
-                if Customers.dicOfCustomers[customerId] != nil {
-                throw OrderError.Invalid("Id is already taken")
-            }
+        if User.userInfo.keys.contains(customerId) {
+            throw OrderError.Invalid("User Id is already taken...")
+        }else{
+            User.userInfo[customerId] = password;
         }
+        
+        
+//        if(!Customers.dicOfCustomers.isEmpty){
+//                if Customers.dicOfCustomers[customerId] != nil {
+//                throw OrderError.Invalid("Id is already taken")
+//            }
+//        }
         
         if customerId.isEmpty{
             throw OrderError.Invalid("Customer ID should not be empty")
@@ -74,17 +81,12 @@ class Customers:User{
         self.email = email
         self.creditCardInfo = creditCardInfo
         self.shippingInfo = shippingInfo
-        registerCustomer(customer: self)
-    }
-    
-    func registerCustomer(customer: Customers){
-        Customers.dicOfCustomers[customer.userId] = customer
     }
     
     func login(userId: String, password: String)-> Bool{
         var login: Bool = false
-        for (id, customer) in Customers.dicOfCustomers{
-            if ((id == userId) && (customer.password == password)){
+        for (id, pass) in User.userInfo{
+            if ((id == userId) && (pass == password)){
                 print("Successfuly login")
                 login = true
             }else{
@@ -131,6 +133,10 @@ class Customers:User{
         print("Customer Name    : \(String(describing: self.customerName))")
         print("Customer Address  : \(String(describing: self.address))")
         print("Customer Email : \(String(describing: self.email))")
+        print("Cart Info:")
+        for s in shoppingCart1{
+            print(s.printData())
+        }
         print("Credit Card     : \(String(describing: self.creditCardInfo))")
         print("Shipping Info   : \(String(describing: self.shippingInfo))")
     }

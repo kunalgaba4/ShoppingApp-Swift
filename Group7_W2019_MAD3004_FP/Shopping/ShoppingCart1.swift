@@ -35,6 +35,7 @@ class ShoppingCart1:IDisplay{
         for c in customer.shoppingCart1{
             if c.cartId == self.cartId{
                 c.product?.quantity = newQty
+                self.printData()
                 return true
             }
         }
@@ -62,6 +63,7 @@ class ShoppingCart1:IDisplay{
         print("Unit Price: \(self.product!.getProductUnitCost!)")
         print("Quantity: \(String(describing: self.product!.getProductQuantity!))")
         print("Date Added: \(self.dateAdded)")
+        print("------------------------------")
     }
     
 }
