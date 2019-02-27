@@ -15,8 +15,7 @@ class Administration: User{
     init?(userId: String, password: String,adminName: String, email: String,loginStatus: LoginStatus)throws{
         try super.init(userId: userId, password: password, loginStatus:loginStatus)
         self.adminName = adminName
-        self.email = email
-    
+        self.email = email    
     }
     
     func updateCatalog(products: [Product], updProduct:Product) -> Bool{

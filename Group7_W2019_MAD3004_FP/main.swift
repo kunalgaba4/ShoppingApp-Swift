@@ -8,9 +8,9 @@
 
 import Foundation
 
+var arrayOfcustomer = [Customers]()
 
 //Add User
-var arrayOfcustomer = [Customers]()
 let user1 = try Customers(userId: "1",password: "Kunal@1234",loginStatus: LoginStatus.Valid)
 arrayOfcustomer.append(user1!)
 
@@ -39,38 +39,36 @@ products.append(product3!)
 products.append(product4!)
 products.append(product5!)
 
+//Update the product by administrator
+let prodToBeUpdated = Product(productId: 1,productName: ProductName.CD,unitCost: 200,quantity: 20)
+if admin1!.updateCatalog(products: products,updProduct: prodToBeUpdated!) {
+    print("Product Updated Succesfully")
+}
+
 do{
-    //Update the product by administrator
-    let prodToBeUpdated = Product(productId: 1,productName: ProductName.CD,unitCost: 200,quantity: 20)
-    if admin1!.updateCatalog(products: products,updProduct: prodToBeUpdated!) {
-        print("Product Updated Succesfully")
-    }
-
-
     //AddCustomer
     let customer1 = Customers()
     try customer1.registerCustomer1(customerId: "4", customerName: "Jagmeet Kaur", address: "abc",email: "Jagmeet@gmail.com", password: "jag@123G",creditCardInfo:"123456789",shippingInfo: "address",loginStatus: .Not_Valid)
     
     //print the Data of the Customer.
-    customer1.printData()
+//    customer1.printData()
     
     //Updating Customer Profile
     customer1.customerName = "Nayayjeet Sharma"
     customer1.address = "699 HBR"
     customer1.updateProfile(customer: arrayOfcustomer)
     //Priniting Update customer Profile Information
-    customer1.printData()
-        
+//    customer1.printData()
+    
    
     
     print("Adding Items into the Cart..........")
-    
     // Add products to Shopping Cart
-    var cartProduct1 = ShoppingCart1(cartId: 1, product:product1! , dateAdded: Date())
-    var cartProduct2 = ShoppingCart1(cartId: 1, product:product2! , dateAdded: Date())
-    var cartProduct3 = ShoppingCart1(cartId: 1, product:product3! , dateAdded: Date())
-    var cartProduct4 = ShoppingCart1(cartId: 1, product:product4! , dateAdded: Date())
-    var cartProduct5 = ShoppingCart1(cartId: 1, product:product5! , dateAdded: Date())
+    let cartProduct1 = ShoppingCart1(cartId: 1, product:product1! , dateAdded: Date())
+    let cartProduct2 = ShoppingCart1(cartId: 1, product:product2! , dateAdded: Date())
+    let cartProduct3 = ShoppingCart1(cartId: 1, product:product3! , dateAdded: Date())
+    let cartProduct4 = ShoppingCart1(cartId: 1, product:product4! , dateAdded: Date())
+    let cartProduct5 = ShoppingCart1(cartId: 1, product:product5! , dateAdded: Date())
     
     cartProduct1.addCartItem(customer: customer1)
     cartProduct2.addCartItem(customer: customer1)
@@ -81,8 +79,7 @@ do{
     for cartDetails in customer1.shoppingCart1{
         cartDetails.printData()
     }
-
-
+    
     //Update quantity
     if(cartProduct1.updateQuantity(customer: customer1, newQty: 40)){
         print("----Quantity Updated-----")

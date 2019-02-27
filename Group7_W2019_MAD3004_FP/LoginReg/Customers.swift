@@ -16,7 +16,6 @@ class Customers:User{
     var shippingInfo: String
     var shoppingCart1: [ShoppingCart1]
     static var dicOfCustomers = [String:Customers]()
-    let shoppingCart = ShoppingCart.getShoppingCart()
     
     override init?(userId: String, password: String, loginStatus: LoginStatus) throws {
         self.customerName = String()
@@ -133,8 +132,6 @@ class Customers:User{
         print("Customer Address  : \(String(describing: self.address))")
         print("Customer Email : \(String(describing: self.email))")
         print("Credit Card     : \(String(describing: self.creditCardInfo))")
-        print("Items in the Cart-----")
-        shoppingCart.printData()
         print("Shipping Info   : \(String(describing: self.shippingInfo))")
     }
 }

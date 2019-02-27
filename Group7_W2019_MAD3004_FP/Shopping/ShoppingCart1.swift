@@ -27,7 +27,6 @@ class ShoppingCart1:IDisplay
         self.cartId = Int()
         self.product = Product()
         self.dateAdded = Date()
-        var arrayProducts:[Product] = [Product]()
     }
     
     
@@ -66,9 +65,12 @@ class ShoppingCart1:IDisplay
         }
     }
     
-    func checkOut()
-    {
-        
+    func checkOut() throws{
+        if arrayProducts.isEmpty{
+            throw OrderError.Invalid("There is nothing to checkout")
+        }else{
+            print("You have succeddfully checked out")
+        }
         
         
     }
