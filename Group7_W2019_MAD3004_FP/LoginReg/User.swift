@@ -25,9 +25,7 @@ class User: IDisplay{
         }else{
             User.userInfo[self.userId] = self.password;
         }
-       
     }
-    
     
     func verifyLogin(customer:[User])-> Bool{
         var isLogin = false
