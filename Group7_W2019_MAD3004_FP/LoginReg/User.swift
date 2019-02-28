@@ -17,9 +17,16 @@ class User: IDisplay{
     }
     
     init?(userId: String, password: String,loginStatus: LoginStatus) throws{
+        if userId.isEmpty || userId.contains(""){
+            throw OrderError.Invalid("Enter a valid user Id")
+        }
+        if !password.isValidPassword(){
+            throw OrderError.Invalid("Invalid Password format")
+        }
         self.loginStatus=loginStatus
         self.userId = userId
         self.password = password
+        
         if User.userInfo.keys.contains(self.userId) {
             throw OrderError.Invalid("User Id is already taken...")
         }else{

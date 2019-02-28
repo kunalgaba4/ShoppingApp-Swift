@@ -18,7 +18,7 @@ do{
     }
     
     //Add administrator
-    let admin1 = try Administration(userId: "3",password: "kunal@123",adminName: "Kunal",email: "Kunal@123mail",loginStatus: LoginStatus.Valid)
+    let admin1 = try Administration(userId: "3",password: "kunal@1234",adminName: "Kunal",email: "Kunal@123mail",loginStatus: LoginStatus.Valid)
     
     //Print the information about the admin
     //admin1?.printData()
@@ -35,7 +35,7 @@ do{
     
     //Printing Update customer Profile Information
     //    customer1.printData()
-    
+
     // Creating Products
     let product1 = Product(productId: 1,productName: ProductName.CD,unitCost: 100,quantity: 20)
     let product2 = Product(productId: 2,productName: ProductName.DVD,unitCost: 100,quantity: 40)
@@ -49,11 +49,12 @@ do{
     products.append(product3!)
     products.append(product4!)
     products.append(product5!)
+
     
     //Update the product by administrator
-    let prodToBeUpdated = Product(productId: 1,productName: ProductName.CD,unitCost: -1,quantity: 20)
-    if let p = prodToBeUpdated {
-        if admin1!.updateCatalog(products: products,updProduct: p) {
+    let prodToBeUpdated = Product(productId: 1,productName: ProductName.CD,unitCost: 20,quantity: 20)
+    if let p = prodToBeUpdated , let a = admin1{
+        if a.updateCatalog(products: products,updProduct: p) {
             print("Product Updated Succesfully")
         }
     }

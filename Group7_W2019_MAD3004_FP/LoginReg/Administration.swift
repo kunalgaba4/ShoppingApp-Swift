@@ -13,9 +13,17 @@ class Administration: User{
     var email: String!
     
     init?(userId: String, password: String,adminName: String, email: String,loginStatus: LoginStatus)throws{
+        if ((adminName.isEmpty)||(adminName.contains(""))) {
+            return nil
+        }else{
+            self.adminName = adminName
+        }
+        if email.isValidEmail() {
+            self.email = email
+        }else{
+            return nil
+        }
         try super.init(userId: userId, password: password, loginStatus:loginStatus)
-        self.adminName = adminName
-        self.email = email    
     }
     
     func updateCatalog(products: [Product], updProduct:Product) -> Bool{

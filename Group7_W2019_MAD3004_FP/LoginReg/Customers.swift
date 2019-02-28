@@ -52,7 +52,7 @@ class Customers:User{
 //            }
 //        }
         
-        if customerId.isEmpty{
+        if customerId.isEmpty || customerId.contains(""){
             throw OrderError.Invalid("Customer ID should not be empty")
         }
         
@@ -107,8 +107,6 @@ class Customers:User{
                 c.shippingInfo = self.shippingInfo
                 c.creditCardInfo = self.creditCardInfo
                 print("Profile Updated")
-            }else{
-                print("Unable to update profile")
             }
         }
     }
@@ -130,11 +128,7 @@ class Customers:User{
         }else{
             print("You are not allowed to pass multiple shipping addresses")
         }
-        
     }
-    
-    
-    
     
     override func printData(){
         super.printData()
