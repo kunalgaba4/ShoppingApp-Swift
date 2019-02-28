@@ -8,7 +8,7 @@
 
 import Foundation
 class Product {
-    var productId:Int?
+    private var productId:Int?
     var getProductID:Int?
     {
         get{

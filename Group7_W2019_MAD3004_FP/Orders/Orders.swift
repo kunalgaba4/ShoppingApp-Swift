@@ -10,14 +10,14 @@ import Foundation
 
 
 class Orders {
-    var orderId = 0
-    var dateCreated: String!
-    var dateShipped: Date!
-    var customerName: String
-    let customerId: String
-    var status: String
-    var shippingId: String
-    var shippingInfo: ShippingInfo
+    private var orderId = 0
+    private var dateCreated: String!
+    private var dateShipped: Date!
+    private var customerName: String
+    private let customerId: String
+    private var status: String
+    private var shippingId: String
+    private var shippingInfo: ShippingInfo
     
     
     init(dateShipped: Date, customerId: String, customerName:String, status: String, shippingId: String, shippingInfo: ShippingInfo){
@@ -40,7 +40,7 @@ class Orders {
     }
     
     func placeOrder(shippingInfo: ShippingInfo, products: [Product]){
-        print("Your Order is placed...!!")
+        print("\n...Your Order is placed...!!")
         let orderDetails = OrderDetails(orderId: self.orderId, arrayOfProducts: products)
         orderDetails.calcPrice()
     }

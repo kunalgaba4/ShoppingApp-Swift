@@ -59,7 +59,7 @@ class ShippingInfo:IDisplay{
     func printData() {
         print("Shipping Id: \(self.shippingId)")
         print("Shipping type: \(self.shippingType)")
-        print("Shipping cost: \(self.shippingCost)")
+        print("Shipping cost: \(self.shippingCost.currency())")
         print("Shipping region: \(self.shippingRegionId)")
     }
     

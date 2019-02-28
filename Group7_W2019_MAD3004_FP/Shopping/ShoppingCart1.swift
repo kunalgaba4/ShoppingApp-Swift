@@ -60,9 +60,9 @@ class ShoppingCart1:IDisplay{
         print("Cart ID: \(self.cartId!)")
         print("Product Id: \(String(describing: product!.getProductID!))")
         print("Product Name: \(String(describing: self.product!.getProductName!))")
-        print("Unit Price: \(self.product!.getProductUnitCost!)")
+        print("Unit Price: \(self.product!.getProductUnitCost!.currency())")
         print("Quantity: \(String(describing: self.product!.getProductQuantity!))")
-        print("Date Added: \(self.dateAdded)")
+        print("Date Added: \(self.dateAdded.formatDate())")
         print("------------------------------")
     }
     

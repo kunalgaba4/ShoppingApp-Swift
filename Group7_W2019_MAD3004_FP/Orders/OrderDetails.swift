@@ -9,13 +9,9 @@
 import Foundation
 
 class OrderDetails:IDisplay{
-    var orderId: Int
-    //    var productId: Int
-    //    var productName: String
-    //    var quantity: Int
-    //    var unitCost: Float
-    var subTotal: Float!
-    var productArray: [Product]
+    private var orderId: Int
+    private var subTotal: Float!
+    private var productArray: [Product]
     
     init(orderId: Int, arrayOfProducts: [Product]){
         self.orderId = orderId
@@ -33,7 +29,7 @@ class OrderDetails:IDisplay{
     }
     
     func calcPrice(){
-        print("Total cart price: \(self.subTotal!)")
+        print("Total cart price: \(self.subTotal!.currency())")
     }
     
     func printData() {
@@ -44,7 +40,7 @@ class OrderDetails:IDisplay{
             print("Product Id: \(productDetails.getProductID ?? 0)")
             print("Product Name: \(String(describing: productDetails.getProductName!))")
             print("Product Quantity: \(productDetails.getProductQuantity ?? 0)")
-            print("Product Cost: \(productDetails.getProductUnitCost ?? 0)")
+            print("Product Cost: \(String(describing: productDetails.getProductUnitCost?.currency()))")
             print("-------------------------------------------------")
         }
     }
