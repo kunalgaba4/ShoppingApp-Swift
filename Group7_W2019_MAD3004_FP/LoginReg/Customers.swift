@@ -15,7 +15,6 @@ class Customers:User{
     var creditCardInfo: String
     var shippingInfo: String
     var shoppingCart1: [ShoppingCart1]
-    static var dicOfCustomers = [String:Customers]()
     var shippingAddressCount = 0
     
     override init?(userId: String, password: String, loginStatus: LoginStatus) throws {
@@ -44,13 +43,6 @@ class Customers:User{
         }else{
             User.userInfo[customerId] = password;
         }
-        
-        
-//        if(!Customers.dicOfCustomers.isEmpty){
-//                if Customers.dicOfCustomers[customerId] != nil {
-//                throw OrderError.Invalid("Id is already taken")
-//            }
-//        }
         
         if customerId.isEmpty || customerId.contains(""){
             throw OrderError.Invalid("Customer ID should not be empty")
