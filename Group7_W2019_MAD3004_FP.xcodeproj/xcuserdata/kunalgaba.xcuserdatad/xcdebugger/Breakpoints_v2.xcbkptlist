@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Group7_W2019_MAD3004_FP/Shopping/ShoppingCart1.swift"
-            timestampString = "572988416.250479"
+            timestampString = "573015443.950702"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "35"
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Group7_W2019_MAD3004_FP/LoginReg/Customers.swift"
-            timestampString = "572988416.250585"
+            timestampString = "573015443.950821"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
             landmarkName = "updateProfile(customer:)"
             landmarkType = "7">
          </BreakpointContent>

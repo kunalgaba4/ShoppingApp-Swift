@@ -1,7 +1,5 @@
-//
 //  main.swift
 //  Group7_W2019_MAD3004_FP
-//
 //  Created by MacStudent on 2019-02-13.
 //  Copyright © 2019 MacStudent. All rights reserved.
 //
@@ -18,6 +16,7 @@ do{
     }else{
         print("Username or password is incorrect")
     }
+    
     //Add administrator
     let admin1 = try Administration(userId: "3",password: "kunal@123",adminName: "Kunal",email: "Kunal@123mail",loginStatus: LoginStatus.Valid)
     
@@ -34,10 +33,9 @@ do{
     customer1.address = "15 Hockley Path"
     customer1.updateProfile(customer: arrayOfcustomer)
     
-//     Priniting Update customer Profile Information
-//    customer1.printData()
+    //Printing Update customer Profile Information
+    //    customer1.printData()
     
-   
     // Creating Products
     let product1 = Product(productId: 1,productName: ProductName.CD,unitCost: 100,quantity: 20)
     let product2 = Product(productId: 2,productName: ProductName.DVD,unitCost: 100,quantity: 40)
@@ -60,9 +58,8 @@ do{
         }
     }
    
-
-    print("\n.......Adding Items into the Cart..........")
     // Add products to Shopping Cart
+    print("\n.......Adding Items into the Cart..........")
     let cartProduct1 = ShoppingCart1(cartId: 1, product:product1! , dateAdded: Date())
     let cartProduct2 = ShoppingCart1(cartId: 1, product:product2! , dateAdded: Date())
     let cartProduct3 = ShoppingCart1(cartId: 1, product:product3! , dateAdded: Date())
@@ -88,7 +85,21 @@ do{
     }
     
     //Add Shipping Information
-    let shippingInfo = ShippingInfo(shippingId: "1",shippingType: "Mail",shippingCost: 200,shippingRegionId: "region_id")
+    let shippingInfo = ShippingInfo(shippingId: "1",
+                                    shippingType: "Mail",
+                                    shippingCost: 200,
+                                    shippingRegionId: "region_id")
+    //Add Shipping Information
+    let shippingInfo1 = ShippingInfo(shippingId: "1",
+                                    shippingType: "Mail",
+                                    shippingCost: 200,
+                                    shippingRegionId: "region_id")
+    
+    //Update shipping information, if you ll pass nil then the value will not be updated.
+    shippingInfo1!.updateShippingInfo(shippingType: nil,
+                                     shippingCost: 100,
+                                     shippingRegionId: "Torronto region")
+    shippingInfo1?.printData()
     customer1.placeOrder(shippingInfo: shippingInfo)
 }
 catch OrderError.Invalid(let p){

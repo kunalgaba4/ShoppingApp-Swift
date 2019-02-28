@@ -16,6 +16,7 @@ class Customers:User{
     var shippingInfo: String
     var shoppingCart1: [ShoppingCart1]
     static var dicOfCustomers = [String:Customers]()
+    var shippingAddressCount = 0
     
     override init?(userId: String, password: String, loginStatus: LoginStatus) throws {
         self.customerName = String()
@@ -113,16 +114,23 @@ class Customers:User{
     }
     
     func placeOrder(shippingInfo: ShippingInfo!){
-        if let shipingInfo1 = shippingInfo{
-            let order = Orders(dateShipped: Date(),customerId: userId,customerName: customerName,status: "Processing",shippingId: "1", shippingInfo: shipingInfo1)
-            var arrayOfProducts = [Product]()
-            for i in shoppingCart1{
-                arrayOfProducts.append(i.getProduct!)
+        if(shippingAddressCount == 0){
+            if let shipingInfo1 = shippingInfo{
+                let order = Orders(dateShipped: Date(),customerId: userId,customerName: customerName,status: "Processing",shippingId: "1", shippingInfo: shipingInfo1)
+                var arrayOfProducts = [Product]()
+                for i in shoppingCart1{
+                    arrayOfProducts.append(i.getProduct!)
+                }
+                order.placeOrder(shippingInfo: shippingInfo, products: arrayOfProducts)
+                shippingAddressCount+=1
+            }else{
+                print("Please pass the Shipping Information")
+                shippingAddressCount = 0
             }
-            order.placeOrder(shippingInfo: shippingInfo, products: arrayOfProducts)
         }else{
-            print("Please pass the Shipping Information")
+            print("You are not allowed to pass multiple shipping addresses")
         }
+        
     }
     
     
